@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://brix0jw77qnpr"]
+
+[ext_resource type="PackedScene" uid="uid://bekwbgkh3r6t0" path="res://scenes/world_view_window.tscn" id="1_xxa2h"]
+
+[node name="Desktop" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="WorldViewWindow" parent="." instance=ExtResource("1_xxa2h")]
+offset_left = 155.0
+offset_top = 90.0
+offset_right = 502.0
+offset_bottom = 385.0
+script = null

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbh1n2aglxgfl"]
+
+[ext_resource type="Script" uid="uid://drarigv05r1jx" path="res://scripts/dummy_camera.gd" id="1_nnsk1"]
+
+[node name="World" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 0.01, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90964, 0, -2.28428)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30156, 1, -0.63353)
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.836097, 0.132141, 1.04515)
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5155, 0.132141, 2.47174)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, 6.32327)
+script = ExtResource("1_nnsk1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.353553, -0.612372, -0.707107, 0.56565, -0.462097, 0.683013, -0.74501, -0.641457, 0.183013, 0, 0, 0)
