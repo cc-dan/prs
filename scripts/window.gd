@@ -1,5 +1,7 @@
 extends PanelContainer
 
+func close() -> void:
+	queue_free()
 
 func _on_title_bar_gui_input(event: InputEvent) -> void:
 	print("clicked")

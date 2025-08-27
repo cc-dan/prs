@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbh1n2aglxgfl"]
+[gd_scene load_steps=3 format=3 uid="uid://dbh1n2aglxgfl"]
 
 [ext_resource type="Script" uid="uid://drarigv05r1jx" path="res://scripts/dummy_camera.gd" id="1_nnsk1"]
 
+[sub_resource type="GDScript" id="GDScript_nnsk1"]
+script/source = "extends Node3D
+
+func _process(delta: float) -> void:
+	"
+
 [node name="World" type="Node3D"]
+script = SubResource("GDScript_nnsk1")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(50, 0, 0, 0, 0.01, 0, 0, 0, 50, 0, 0, 0)

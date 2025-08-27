@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1j71sqxb754k"]
+
+[ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_owajo"]
+[ext_resource type="Script" uid="uid://dkc5ax13a8rik" path="res://scripts/missing_dog_window.gd" id="2_3foo6"]
+
+[node name="MissingDogWindow" instance=ExtResource("1_owajo")]
+offset_right = 294.0
+offset_bottom = 214.0
+script = ExtResource("2_3foo6")
+
+[node name="Title" parent="HBoxContainer/TitleBar/MarginContainer" index="0"]
+text = "MISSING: "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Body" index="0"]
+layout_mode = 2
+
+[node name="DogViewContainer" type="SubViewportContainer" parent="HBoxContainer/Body/VBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="FurForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/FurForm" index="0"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Fur"
+
+[node name="Value" type="Label" parent="HBoxContainer/Body/VBoxContainer/FurForm" index="1"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ": Light brown with white spots"
+horizontal_alignment = 2
+
+[node name="EarsForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="2"]
+layout_mode = 2
+
+[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/EarsForm" index="0"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ears"
+
+[node name="Value" type="Label" parent="HBoxContainer/Body/VBoxContainer/EarsForm" index="1"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ": Short and round"
+horizontal_alignment = 2
+
+[node name="TailForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="3"]
+layout_mode = 2
+
+[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/TailForm" index="0"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Tail"
+
+[node name="Value" type="Label" parent="HBoxContainer/Body/VBoxContainer/TailForm" index="1"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ": Long"
+horizontal_alignment = 2

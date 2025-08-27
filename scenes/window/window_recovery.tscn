@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://xgji17ywxot7"]
+
+[ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_ypbx4"]
+[ext_resource type="Script" uid="uid://cjpqmum7es1iv" path="res://scripts/window_recovery.gd" id="2_6xp8y"]
+[ext_resource type="ButtonGroup" uid="uid://diy00s0kwsd8p" path="res://scenes/resources/window_recovery_buttons.tres" id="3_kycyh"]
+
+[node name="Window" instance=ExtResource("1_ypbx4")]
+offset_right = 151.0
+offset_bottom = 157.0
+script = ExtResource("2_6xp8y")
+
+[node name="Title" parent="HBoxContainer/TitleBar/MarginContainer" index="0"]
+text = "Recover"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Body" index="0"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Body/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Which pet is this?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+button_pressed = true
+button_group = ExtResource("3_kycyh")
+
+[node name="Label" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Option 1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="2"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/HBoxContainer2" index="0"]
+layout_mode = 2
+button_group = ExtResource("3_kycyh")
+
+[node name="Label" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/HBoxContainer2" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Option 2"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="3"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/HBoxContainer3" index="0"]
+layout_mode = 2
+button_group = ExtResource("3_kycyh")
+
+[node name="Label" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/HBoxContainer3" index="1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Option 3"
+
+[node name="Button" type="Button" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="4"]
+layout_mode = 2
+text = "Submit"
+
+[connection signal="pressed" from="HBoxContainer/Body/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

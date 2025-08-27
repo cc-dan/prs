@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bekwbgkh3r6t0"]
 
-[ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window.tscn" id="1_kl2qe"]
+[ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_kl2qe"]
 [ext_resource type="PackedScene" uid="uid://dbh1n2aglxgfl" path="res://scenes/world.tscn" id="2_nkyuf"]
 
 [node name="WorldViewWindow" instance=ExtResource("1_kl2qe")]
@@ -16,7 +16,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/Body/SubViewportContainer" index="0"]
 handle_input_locally = false
-size = Vector2i(347, 268)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="World" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_nkyuf")]
