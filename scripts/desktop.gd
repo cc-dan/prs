@@ -39,4 +39,4 @@ func popup_quest(pet_info: Dictionary) -> void:
 	window.init(pet_info)
 	var canvas: Vector2 = DisplayServer.window_get_size()
 	window.set_position(Vector2(randi_range(0, canvas.x / 2), randi_range(0, canvas.y / 2)))
-	add_child(window)
+	$Secondary.add_child(window)

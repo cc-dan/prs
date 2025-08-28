@@ -1,14 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bekwbgkh3r6t0"]
+[gd_scene load_steps=3 format=3 uid="uid://bdjxhb4yyqceu"]
 
-[ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_kl2qe"]
-[ext_resource type="PackedScene" uid="uid://urskd6n21151" path="res://scenes/world.tscn" id="2_57wev"]
+[ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_pgph7"]
+[ext_resource type="PackedScene" uid="uid://urskd6n21151" path="res://scenes/world.tscn" id="2_ht4pq"]
 
-[node name="WorldViewWindow" instance=ExtResource("1_kl2qe")]
-offset_right = 347.0
-offset_bottom = 295.0
-
-[node name="Title" parent="HBoxContainer/TitleBar/MarginContainer" index="0"]
-text = "ConurbanView"
+[node name="Window" instance=ExtResource("1_pgph7")]
+offset_right = 523.0
+offset_bottom = 432.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer/Body" index="0"]
 layout_mode = 2
@@ -16,7 +13,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/Body/SubViewportContainer" index="0"]
 handle_input_locally = false
-size = Vector2i(347, 268)
+size = Vector2i(523, 405)
 render_target_update_mode = 4
 
-[node name="world" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_57wev")]
+[node name="world" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_ht4pq")]

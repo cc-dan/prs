@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://brix0jw77qnpr"]
 
 [ext_resource type="Script" uid="uid://dl8jk7ycf4dcs" path="res://scripts/desktop.gd" id="1_81rff"]
-[ext_resource type="PackedScene" uid="uid://bekwbgkh3r6t0" path="res://scenes/window/window_world_view.tscn" id="1_xxa2h"]
 [ext_resource type="PackedScene" uid="uid://xgji17ywxot7" path="res://scenes/window/window_recovery.tscn" id="2_7gre8"]
+[ext_resource type="PackedScene" uid="uid://bdjxhb4yyqceu" path="res://scenes/window/window_world_view.tscn" id="4_ox5hf"]
 
 [node name="Desktop" type="Node2D"]
 script = ExtResource("1_81rff")
@@ -12,16 +12,23 @@ offset_right = 800.0
 offset_bottom = 600.0
 color = Color(0.564706, 0.819608, 1, 1)
 
-[node name="WorldViewWindow" parent="." instance=ExtResource("1_xxa2h")]
-offset_left = 155.0
-offset_top = 90.0
-offset_right = 502.0
-offset_bottom = 385.0
-script = null
+[node name="Main" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="RecoveryWindow" parent="." instance=ExtResource("2_7gre8")]
+[node name="WorldViewWindow" parent="Main" instance=ExtResource("4_ox5hf")]
+
+[node name="Secondary" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RecoveryWindow" parent="Secondary" instance=ExtResource("2_7gre8")]
 unique_name_in_owner = true
 offset_left = 525.0
 offset_top = 163.0
 offset_right = 676.0
-offset_bottom = 320.0
+offset_bottom = 347.0
