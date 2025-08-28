@@ -9,8 +9,8 @@ offset_right = 523.0
 offset_bottom = 432.0
 script = ExtResource("2_mp5p1")
 
-[node name="Title" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer" index="0"]
-text = "ConurbanView"
+[node name="CloseButton" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer" index="0"]
+disabled = true
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer/Body" index="0"]
 layout_mode = 2
@@ -33,23 +33,17 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Body/StartScreen/CenterContainer" index="0"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="0"]
-layout_mode = 2
-text = "Today's shift:"
-horizontal_alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="1"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="0"]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="PetsCounter" type="Label" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer/MarginContainer" index="0"]
-unique_name_in_owner = true
+[node name="Label" type="Label" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer/MarginContainer" index="0"]
 layout_mode = 2
-text = "X missing pets"
+text = "Welcome rescuer!"
 horizontal_alignment = 1
 
-[node name="StartButton" type="Button" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="2"]
+[node name="StartButton" type="Button" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start Shift"

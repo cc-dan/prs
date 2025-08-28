@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dl8jk7ycf4dcs" path="res://scripts/desktop.gd" id="1_81rff"]
 [ext_resource type="PackedScene" uid="uid://xgji17ywxot7" path="res://scenes/window/window_recovery.tscn" id="2_7gre8"]
 [ext_resource type="Texture2D" uid="uid://3ovlcv87urfh" path="res://scenes/images/saul.png" id="4_dcrhm"]
-[ext_resource type="PackedScene" uid="uid://bdjxhb4yyqceu" path="res://scenes/window/window_world_view.tscn" id="4_ox5hf"]
+[ext_resource type="PackedScene" uid="uid://bvnsasdwtykit" path="res://scenes/taskbar/taskbar.tscn" id="5_dcrhm"]
 
 [node name="Desktop" type="Node2D"]
 script = ExtResource("1_81rff")
@@ -12,6 +12,14 @@ script = ExtResource("1_81rff")
 offset_right = 800.0
 offset_bottom = 600.0
 color = Color(0.564706, 0.819608, 1, 1)
+
+[node name="Taskbar" parent="." instance=ExtResource("5_dcrhm")]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 600.0
+offset_right = 400.0
+offset_bottom = 600.0
+grow_vertical = 0
 
 [node name="Icon" type="Control" parent="."]
 layout_mode = 3
@@ -44,23 +52,7 @@ text = "Pet Recovery Services"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Main" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="WorldViewWindow" parent="Main" instance=ExtResource("4_ox5hf")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_left = 181.0
-offset_top = 40.0
-offset_right = 704.0
-offset_bottom = 472.0
-
 [node name="Secondary" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -76,4 +68,3 @@ offset_right = 676.0
 offset_bottom = 347.0
 
 [connection signal="pressed" from="Icon/VBoxContainer/Button" to="." method="_on_world_view_icon_pressed"]
-[connection signal="game_started" from="Main/WorldViewWindow" to="." method="_on_world_view_window_game_started"]
