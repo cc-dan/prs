@@ -15,3 +15,6 @@ func _on_title_bar_gui_input(event: InputEvent) -> void:
 			cursor_offset = null
 	if event is InputEventMouseMotion and cursor_offset:
 		global_position = get_global_mouse_position() - cursor_offset
+
+func _on_close_pressed() -> void:
+	close()

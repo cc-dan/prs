@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdjxhb4yyqceu"]
+[gd_scene load_steps=4 format=3 uid="uid://bdjxhb4yyqceu"]
 
 [ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_pgph7"]
 [ext_resource type="PackedScene" uid="uid://urskd6n21151" path="res://scenes/world.tscn" id="2_ht4pq"]
+[ext_resource type="Script" uid="uid://odf8l0pmgwdv" path="res://scripts/window_world_view.gd" id="2_mp5p1"]
 
 [node name="Window" instance=ExtResource("1_pgph7")]
 offset_right = 523.0
 offset_bottom = 432.0
+script = ExtResource("2_mp5p1")
+
+[node name="Title" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer" index="0"]
+text = "ConurbanView"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer/Body" index="0"]
 layout_mode = 2
@@ -13,7 +18,40 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/Body/SubViewportContainer" index="0"]
 handle_input_locally = false
-size = Vector2i(523, 405)
+size = Vector2i(523, 397)
 render_target_update_mode = 4
 
 [node name="world" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_ht4pq")]
+
+[node name="StartScreen" type="PanelContainer" parent="HBoxContainer/Body" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/Body/StartScreen" index="0"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Body/StartScreen/CenterContainer" index="0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="0"]
+layout_mode = 2
+text = "Today's shift:"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="1"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PetsCounter" type="Label" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer/MarginContainer" index="0"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "X missing pets"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer" index="2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start Shift"
+
+[connection signal="pressed" from="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

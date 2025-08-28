@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://brix0jw77qnpr"]
+[gd_scene load_steps=5 format=3 uid="uid://brix0jw77qnpr"]
 
 [ext_resource type="Script" uid="uid://dl8jk7ycf4dcs" path="res://scripts/desktop.gd" id="1_81rff"]
 [ext_resource type="PackedScene" uid="uid://xgji17ywxot7" path="res://scenes/window/window_recovery.tscn" id="2_7gre8"]
+[ext_resource type="Texture2D" uid="uid://3ovlcv87urfh" path="res://scenes/images/saul.png" id="4_dcrhm"]
 [ext_resource type="PackedScene" uid="uid://bdjxhb4yyqceu" path="res://scenes/window/window_world_view.tscn" id="4_ox5hf"]
 
 [node name="Desktop" type="Node2D"]
@@ -12,6 +13,37 @@ offset_right = 800.0
 offset_bottom = 600.0
 color = Color(0.564706, 0.819608, 1, 1)
 
+[node name="Icon" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Icon"]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 151.0
+
+[node name="Button" type="Button" parent="Icon/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("4_dcrhm")
+
+[node name="Label" type="Label" parent="Icon/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Pet Recovery Services"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Main" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -19,8 +51,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="WorldViewWindow" parent="Main" instance=ExtResource("4_ox5hf")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 181.0
+offset_top = 40.0
+offset_right = 704.0
+offset_bottom = 472.0
 
 [node name="Secondary" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -28,7 +68,12 @@ offset_bottom = 40.0
 
 [node name="RecoveryWindow" parent="Secondary" instance=ExtResource("2_7gre8")]
 unique_name_in_owner = true
+visible = false
+layout_mode = 0
 offset_left = 525.0
 offset_top = 163.0
 offset_right = 676.0
 offset_bottom = 347.0
+
+[connection signal="pressed" from="Icon/VBoxContainer/Button" to="." method="_on_world_view_icon_pressed"]
+[connection signal="game_started" from="Main/WorldViewWindow" to="." method="_on_world_view_window_game_started"]
