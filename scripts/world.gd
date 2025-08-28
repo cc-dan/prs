@@ -1,7 +1,7 @@
 extends Node3D
 @onready var camera: Node3D = $camera/Base/Camera3D
 
-signal dog_clicked
+signal dog_clicked(dog_name: String)
 
 func cast_ray(mask: int) -> Dictionary:
 	const RAY_LENGTH = 1000.0
@@ -21,5 +21,4 @@ func _process(delta: float) -> void:
 	var result: Dictionary = cast_ray(2)
 	if Input.is_action_just_pressed("lclick"):
 		if result.size() > 0:
-			dog_clicked.emit()
-			print(result["collider"])
+			dog_clicked.emit(result["collider"].name)
