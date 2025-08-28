@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://urskd6n21151"]
+[gd_scene load_steps=8 format=3 uid="uid://urskd6n21151"]
 
+[ext_resource type="Script" uid="uid://rgjhy1oqk6rg" path="res://scripts/world.gd" id="1_k0juu"]
 [ext_resource type="PackedScene" uid="uid://4kprksxhy6hn" path="res://scenes/map.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://bccskpta0aovn" path="res://scenes/camera.tscn" id="2_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://ckt5qopiaifds" path="res://scenes/pets/dog.tscn" id="3_4wyf3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -15,7 +17,8 @@ background_mode = 2
 sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
 
-[node name="Game" type="Node3D"]
+[node name="World" type="Node3D"]
+script = ExtResource("1_k0juu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 50, 0)
@@ -28,4 +31,29 @@ environment = SubResource("Environment_lnu2h")
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0.576479, 0.41551, -0.680323)
 
 [node name="camera" parent="." instance=ExtResource("2_4wyf3")]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 29, 0)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 29, 20)
+
+[node name="Dog" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -9)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog2" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 12)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog3" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog4" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog5" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -11)
+collision_layer = 2
+collision_mask = 2
