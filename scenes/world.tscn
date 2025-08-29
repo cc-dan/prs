@@ -57,3 +57,53 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -11)
 collision_layer = 2
 collision_mask = 2
+
+[node name="Dog6" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -26)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog7" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -4, 1, -26)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog8" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -15, 1, -22.437)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog9" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 25, 1, -25.437)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog10" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 40, 1, 13.563)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog11" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 0, 1, 23.563)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog12" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -38, 1, 23.563)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog13" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -46, 1, 8.56297)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog14" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 3, 1, -56.437)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Dog15" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -31, 1, -29.437)
+collision_layer = 2
+collision_mask = 2

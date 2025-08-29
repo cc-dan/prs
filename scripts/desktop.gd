@@ -5,6 +5,7 @@ const pet_structure = preload("res://scripts/pet_structure.gd")
 const missing_dog_window = preload("res://scenes/window/window_missing_dog.tscn")
 const world_view_window = preload("res://scenes/window/window_world_view.tscn")
 
+var recovery_window: window = null
 var game_window: window = null
 
 func _ready() -> void:
@@ -15,7 +16,10 @@ func start_game(objectives: Array) -> void:
 	for pet in objectives:
 		pet_names.append(pet["id"])
 		popup_quest(pet)
-	%RecoveryWindow.init(pet_names)
+		
+	print(pet_names)
+	#%RecoveryWindow.init(pet_names)
+	recovery_window.init(pet_names)
 	
 func popup_quest(pet_info: Dictionary) -> void:
 	var popup: window = create_window(missing_dog_window, "MISSING: " + pet_info["id"]) #missing_dog_window.instantiate()
@@ -34,6 +38,7 @@ func create_window(window_resource: Resource, title: String) -> window:
 func _on_world_view_icon_pressed() -> void:
 	if game_window: return
 	game_window = create_window(world_view_window, "Conurbanview")
+	recovery_window = game_window.get_node("HBoxContainer/Body/SubViewportContainer/RecoveryWindow")
 	game_window.game_started.connect(_on_world_view_window_game_started)
 	add_child(game_window)
 
@@ -46,7 +51,7 @@ func _on_world_view_window_game_started() -> void:
 			hair_spots = pet_structure.HAIR_SPOTS_BIG
 		},
 		{
-			id = "Filipa",
+			id = "Philipa",
 			ears = pet_structure.EARS_POINTY,
 			nose = pet_structure.NOSE_BIG_ROUND,
 			hair_spots = pet_structure.HAIR_SPOTS_BIG

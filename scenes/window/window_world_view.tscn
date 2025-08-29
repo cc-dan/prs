@@ -26,6 +26,7 @@ render_target_update_mode = 4
 [node name="world" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_ht4pq")]
 
 [node name="RecoveryWindow" parent="HBoxContainer/Body/SubViewportContainer" index="1" instance=ExtResource("4_so2iy")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8

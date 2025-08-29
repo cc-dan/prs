@@ -44,6 +44,7 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 button_pressed = true
 button_group = ExtResource("3_kycyh")
+text = "sdsddsdsd"
 
 [node name="CheckBox2" type="CheckBox" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" index="1"]
 unique_name_in_owner = true
@@ -54,6 +55,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 button_group = ExtResource("3_kycyh")
+text = "sdsddsdsd"
 
 [node name="CheckBox3" type="CheckBox" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" index="2"]
 unique_name_in_owner = true
@@ -64,6 +66,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 button_group = ExtResource("3_kycyh")
+text = "sdsddsdsd"
 
 [node name="Submit" type="Button" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="2"]
 layout_mode = 2
