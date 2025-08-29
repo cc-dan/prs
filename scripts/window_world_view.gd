@@ -11,7 +11,6 @@ func init(npets: int) -> void:
 func close() -> void:
 	visible = false
 
->>>>>>> a2174de (Abrir windowrecovery al clickear en un perro)
 func _on_start_button_pressed() -> void:
 	%StartScreen.visible = false
 	game_started.emit()
