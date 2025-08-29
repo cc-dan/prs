@@ -21,14 +21,14 @@ layout_mode = 2
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Fur spots:"
+text = "Fur:"
 
-[node name="SpotsInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/FurForm" index="1"]
+[node name="FurInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/FurForm" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = ": Light brown with white spots"
+text = "Light brown with white spots"
 horizontal_alignment = 2
 
 [node name="EarsForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="1"]
@@ -80,4 +80,21 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Long"
+horizontal_alignment = 2
+
+[node name="EyesForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="4"]
+layout_mode = 2
+
+[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/EyesForm" index="0"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Eyes:"
+
+[node name="EyesInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/EyesForm" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Round"
 horizontal_alignment = 2

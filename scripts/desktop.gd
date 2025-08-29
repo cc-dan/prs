@@ -16,9 +16,6 @@ func start_game(objectives: Array) -> void:
 	for pet in objectives:
 		pet_names.append(pet["id"])
 		popup_quest(pet)
-		
-	print(pet_names)
-	#%RecoveryWindow.init(pet_names)
 	recovery_window.init(pet_names)
 	
 func popup_quest(pet_info: Dictionary) -> void:
@@ -46,20 +43,27 @@ func _on_world_view_window_game_started() -> void:
 	start_game([
 		{
 			id = "Gorda", 
-			ears = pet_structure.EARS_POINTY,
+			ears = pet_structure.EARS_ROUND,
 			nose = pet_structure.NOSE_BIG_ROUND,
-			hair_spots = pet_structure.HAIR_SPOTS_BIG
+			hair_spots_shape = pet_structure.HAIR_SPOTS_BIG,
+			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_BROWN,
+			hair_color = pet_structure.HAIR_COLOR_WHITE
 		},
 		{
 			id = "Philipa",
-			ears = pet_structure.EARS_POINTY,
+			ears = pet_structure.EARS_ROUND,
 			nose = pet_structure.NOSE_BIG_ROUND,
-			hair_spots = pet_structure.HAIR_SPOTS_BIG
+			hair_spots_shape = 0,
+			hair_spots_color = 0,
+			hair_color = pet_structure.HAIR_COLOR_GREY
 		},
 		{
 			id = "Chicho",
 			ears = pet_structure.EARS_POINTY,
 			nose = pet_structure.NOSE_BIG_ROUND,
-			hair_spots = pet_structure.HAIR_SPOTS_BIG
+			hair_spots = pet_structure.HAIR_SPOTS_BIG,
+			hair_spots_shape = 0,
+			hair_spots_color = 0,
+			hair_color = pet_structure.HAIR_COLOR_GREY
 		}
 	])
