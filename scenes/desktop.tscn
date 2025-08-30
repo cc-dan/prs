@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://brix0jw77qnpr"]
+[gd_scene load_steps=5 format=3 uid="uid://brix0jw77qnpr"]
 
 [ext_resource type="Script" uid="uid://dl8jk7ycf4dcs" path="res://scripts/desktop.gd" id="1_81rff"]
 [ext_resource type="Texture2D" uid="uid://3ovlcv87urfh" path="res://scenes/images/saul.png" id="4_dcrhm"]
 [ext_resource type="PackedScene" uid="uid://bvnsasdwtykit" path="res://scenes/taskbar/taskbar.tscn" id="5_dcrhm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81rff"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="Desktop" type="Node2D"]
 script = ExtResource("1_81rff")
@@ -51,4 +54,28 @@ text = "Pet Recovery Services"
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="EndScreen" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_right = 800.0
+offset_bottom = 600.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_81rff")
+
+[node name="CenterContainer" type="CenterContainer" parent="EndScreen"]
+layout_mode = 2
+
+[node name="EndText" type="Label" parent="EndScreen/CenterContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Thank you for playing!
+https://wsilla.itch.io
+30/08/25"
+horizontal_alignment = 1
+
+[node name="EndTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+
 [connection signal="pressed" from="Icon/VBoxContainer/Button" to="." method="_on_world_view_icon_pressed"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]

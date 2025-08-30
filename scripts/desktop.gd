@@ -10,6 +10,9 @@ var game_window: window = null
 var pet_names: Array = []
 var tries: int
 
+func _ready() -> void:
+	TransitionScreen.transition(true)
+
 func start_game(objectives: Array) -> void:
 	pet_names = []
 	for pet in objectives:
@@ -51,7 +54,18 @@ func _on_world_view_icon_pressed() -> void:
 	recovery_window = game_window.get_node("HBoxContainer/Body/SubViewportContainer/RecoveryWindow")
 	game_window.game_started.connect(_on_world_view_window_game_started)
 	game_window.dog_found.connect(_on_world_view_window_dog_found)
+	game_window.game_ended.connect(_on_game_ended)
 	add_child(game_window)
+
+func _on_game_ended() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
+	if pet_names.is_empty():
+		%EndScreen.move_to_front()
+		%EndScreen.visible = true
+		%EndTimer.start()
+	else:
+		get_tree().reload_current_scene()
 
 func _on_world_view_window_game_started() -> void:
 	start_game([
@@ -90,3 +104,7 @@ func _on_world_view_window_dog_found(selection: String, pet: String):
 	tries -= 1
 	if tries == 0 or pet_names.is_empty():
 		end_game()
+
+
+func _on_end_timer_timeout() -> void:
+	get_tree().quit()

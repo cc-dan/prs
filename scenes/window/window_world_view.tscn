@@ -106,4 +106,5 @@ one_shot = true
 
 [connection signal="dog_clicked" from="HBoxContainer/Body/SubViewportContainer/SubViewport/world" to="." method="_on_world_dog_clicked"]
 [connection signal="submit" from="HBoxContainer/Body/SubViewportContainer/RecoveryWindow" to="." method="_on_recovery_window_submit"]
+[connection signal="pressed" from="HBoxContainer/Body/EndScreen/CenterContainer/VBoxContainer/EndButton" to="." method="_on_end_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
