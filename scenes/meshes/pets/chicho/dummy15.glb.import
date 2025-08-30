@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crafnn06804nc"
-path="res://.godot/imported/lucho.glb-556ea10c48dd0b70eceb0df4a420aefc.scn"
+uid="uid://2xbio8wnm8sl"
+path="res://.godot/imported/dummy15.glb-7c9057a523aa5019889a1db4f9681a95.scn"
 
 [deps]
 
-source_file="res://scenes/meshes/lucho.glb"
-dest_files=["res://.godot/imported/lucho.glb-556ea10c48dd0b70eceb0df4a420aefc.scn"]
+source_file="res://scenes/meshes/pets/chicho/dummy15.glb"
+dest_files=["res://.godot/imported/dummy15.glb-7c9057a523aa5019889a1db4f9681a95.scn"]
 
 [params]
 

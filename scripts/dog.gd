@@ -35,17 +35,16 @@ func get_next_point()->Vector3:
 		return Vector3.ZERO
 	return path[path_index]
 
-func wait() -> void:
-	await get_tree().create_timer(randf_range(5, 15)).timeout
-	idle = false
-
 func _physics_process(delta: float) -> void:
+	if id == "Gorda": 
+		if idle: print("idling for ", $Idler.time_left)
 	if idle: return
 	
 	var next_point := get_next_point()
+	if id == "Gorda": print("Stopped idling, next point: ", next_point)
 	if next_point == Vector3.ZERO:
 		idle = true
-		%Idler.start()
+		$Idler.start()
 		return
 		
 	if global_position.distance_to(next_point) >= 1: # Hack para que look_at no lloriquee
@@ -56,4 +55,4 @@ func _on_idler_timeout() -> void:
 	var point := Vector2(global_position.x, global_position.z) + random_point_in_circle(randf_range(2, 8))
 	set_path(NavigationServer3D.map_get_closest_point(map, Vector3(point.x, global_position.y, point.y)))
 	idle = false
-	%Idler.wait_time = randf_range(5, 10)
+	$Idler.wait_time = randf_range(5, 10)

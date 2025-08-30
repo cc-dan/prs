@@ -1,10 +1,31 @@
-[gd_scene load_steps=10 format=3 uid="uid://urskd6n21151"]
+[gd_scene load_steps=32 format=3 uid="uid://urskd6n21151"]
 
 [ext_resource type="Script" uid="uid://cq0q1px2njaxa" path="res://scripts/world.gd" id="1_k0juu"]
 [ext_resource type="PackedScene" uid="uid://4kprksxhy6hn" path="res://scenes/map.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://bccskpta0aovn" path="res://scenes/camera.tscn" id="2_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://ckt5qopiaifds" path="res://scenes/pets/dog.tscn" id="3_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://b4iq71qhfp5mt" path="res://scenes/meshes/map1.glb" id="5_71j4m"]
+[ext_resource type="Script" uid="uid://c56gnwox4xkir" path="res://scripts/dog.gd" id="5_i7141"]
+[ext_resource type="PackedScene" uid="uid://cqb253lhm8lnw" path="res://scenes/meshes/pets/chicho/Chicho.glb" id="6_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://brnh4yt04gc7a" path="res://scenes/meshes/pets/gorda/gorda.glb" id="7_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://htjgsnp7dybt" path="res://scenes/meshes/pets/lucho/dummy1.glb" id="8_q5onr"]
+[ext_resource type="PackedScene" uid="uid://barf5yjejvu8g" path="res://scenes/meshes/pets/lucho/dummy2.glb" id="9_jhx03"]
+[ext_resource type="PackedScene" uid="uid://bq57q1kamv2tk" path="res://scenes/meshes/pets/lucho/dummy3.glb" id="10_o8fc1"]
+[ext_resource type="PackedScene" uid="uid://c47pqkdon5y3y" path="res://scenes/meshes/pets/lucho/dummy4.glb" id="11_o8fc1"]
+[ext_resource type="PackedScene" uid="uid://dfubhq17t6m7i" path="res://scenes/meshes/pets/lucho/dummy5.glb" id="12_xo05s"]
+[ext_resource type="PackedScene" uid="uid://bpx2qflkcqubu" path="res://scenes/meshes/pets/lucho/dummy6.glb" id="13_dss4m"]
+[ext_resource type="PackedScene" uid="uid://cug3yggqqqco5" path="res://scenes/meshes/pets/gorda/dummy7.glb" id="14_dss4m"]
+[ext_resource type="PackedScene" uid="uid://d3ud2oflqh5fe" path="res://scenes/meshes/pets/gorda/dummy8.glb" id="15_7t5mc"]
+[ext_resource type="PackedScene" uid="uid://crdthgid1ejyh" path="res://scenes/meshes/pets/gorda/dummy9.glb" id="16_7t5mc"]
+[ext_resource type="PackedScene" uid="uid://cms0kqia7ekjk" path="res://scenes/meshes/pets/gorda/dummy10.glb" id="17_lakw3"]
+[ext_resource type="PackedScene" uid="uid://mmejcgmhf5ao" path="res://scenes/meshes/pets/gorda/dummy11.glb" id="18_2lf6f"]
+[ext_resource type="PackedScene" uid="uid://c1jxunbs4m61x" path="res://scenes/meshes/pets/gorda/dummy12.glb" id="19_7iits"]
+[ext_resource type="PackedScene" uid="uid://bcjieyqw20tiw" path="res://scenes/meshes/pets/chicho/dummy13.glb" id="20_oo54l"]
+[ext_resource type="PackedScene" uid="uid://dprwdg72d0t3i" path="res://scenes/meshes/pets/chicho/dummy14.glb" id="21_kpybi"]
+[ext_resource type="PackedScene" uid="uid://2xbio8wnm8sl" path="res://scenes/meshes/pets/chicho/dummy15.glb" id="22_kpybi"]
+[ext_resource type="PackedScene" uid="uid://cvqvo50rfiigy" path="res://scenes/meshes/pets/chicho/dummy16.glb" id="23_ctatt"]
+[ext_resource type="PackedScene" uid="uid://c4sn44xqemnry" path="res://scenes/meshes/pets/chicho/dummy17.glb" id="24_munwf"]
+[ext_resource type="PackedScene" uid="uid://dc25g3mex0glq" path="res://scenes/meshes/pets/chicho/dummy18.glb" id="25_munwf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uwrxv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -17,6 +38,8 @@ sky_material = SubResource("ProceduralSkyMaterial_uwrxv")
 background_mode = 2
 sky = SubResource("Sky_yqjtg")
 tonemap_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1vg85"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_71j4m"]
 vertices = PackedVector3Array(8.62724, 0.105611, -31.2012, 8.62724, 0.105611, -30.4512, 16.6272, 0.105611, -27.2012, 17.1272, 0.105611, -27.2012, 5.62724, 0.105611, -33.7012, 27.3772, 0.105611, -36.4512, 31.3772, 0.105611, -65.7012, 25.3772, 0.105611, -71.7012, 0.877243, 0.105611, -46.9512, 19.8772, 0.105611, -24.2012, 37.8772, 0.105611, -38.7012, 58.3772, 0.105611, -38.7012, -9.87276, 0.105611, -36.4512, -9.87276, 0.105611, -35.9512, -0.872757, 0.105611, -27.2012, 19.8772, 0.105611, -23.9512, 23.1272, 0.105611, -20.7012, 23.3772, 0.105611, -20.7012, 35.1272, 0.105611, -29.7012, 64.6272, 0.105611, -32.4512, -7.62276, 7.10561, -27.7012, -5.12276, 8.10561, -29.7012, -12.8728, 8.10561, -37.7012, -15.3728, 7.10561, -35.7012, -6.78942, 7.85561, -28.3678, -14.5394, 7.85561, -36.3678, -11.8728, 6.35561, -34.9512, -11.3728, 6.35561, -35.2012, -12.8728, 6.35561, -37.2012, -13.6228, 6.35561, -36.9512, -10.1228, 0.105611, -31.4512, -8.62276, 0.105611, -32.4512, -10.1228, 0.105611, -34.4512, -11.6228, 0.105611, -33.2012, -9.87276, 3.35561, -31.4512, -8.62276, 3.35561, -32.4512, -10.1228, 3.35561, -34.4512, -11.6228, 3.35561, -33.2012, -9.12276, 6.35561, -32.2012, -8.62276, 6.35561, -32.4512, -10.1228, 6.35561, -34.4512, -10.6228, 6.35561, -34.2012, -8.12276, 0.105611, -27.2012, -8.12276, 0.105611, -27.9512, -9.37276, 0.105611, -29.2012, -10.3728, 0.105611, -29.4512, -10.3728, 0.105611, -17.4512, -9.62276, 0.105611, -17.4512, -6.62276, 0.105611, -26.2012, -13.1228, 0.105611, -32.7012, -13.6228, 0.105611, -32.7012, -24.1228, 0.105611, -22.2012, -14.8728, 0.105611, -12.9512, 5.62724, 8.10561, -32.4512, 0.627243, 8.10561, -27.4512, 2.62724, 7.35561, -25.2012, 3.12724, 7.10561, -25.2012, 7.87724, 7.10561, -29.9512, 7.87724, 7.35561, -30.4512, 7.12724, 7.85561, -31.1178, 1.96058, 7.85561, -25.9512, 2.62227, 8.10561, -27.2042, 26.1272, 0.105611, -18.2012, 25.8772, 0.105611, -17.2012, 31.3772, 0.105611, -11.7012, 32.3772, 0.105611, -11.7012, 34.8772, 0.105611, -9.20118, 48.1272, 0.105611, -3.70118, 70.8772, 0.105611, -26.2012, 34.8772, 0.105611, -8.45118, 5.87724, 0.105611, -30.4512, 6.87724, 0.105611, -30.7012, 5.62724, 0.105611, -31.9512, 4.12724, 0.105611, -30.4512, 4.12724, 0.105611, -29.9512, 5.37724, 0.105611, -29.2012, 4.12724, 3.35561, -30.4512, 5.12724, 3.35561, -28.9512, 7.12724, 3.35561, -30.4512, 5.62724, 3.35561, -31.9512, 4.12724, 6.35561, -30.4512, 4.62724, 6.35561, -29.7012, 6.12724, 6.35561, -31.2012, 5.62724, 6.35561, -31.9512, -7.12276, 0.105611, -28.7012, -5.62276, 0.105611, -29.7012, -7.37276, 0.105611, -31.7012, -8.62276, 0.105611, -30.7012, -7.12276, 3.35561, -28.4512, -5.62276, 3.35561, -29.7012, -7.37276, 3.35561, -31.7012, -8.87276, 3.35561, -30.4512, -6.37276, 6.35561, -29.4512, -5.62276, 6.35561, -29.7012, -7.37276, 6.35561, -31.7012, -7.87276, 6.35561, -31.4512, 11.3772, 0.105611, -21.9512, 11.8772, 0.105611, -21.9512, 12.8772, 0.105611, -22.9512, 5.87724, 0.105611, -27.2012, 12.8772, 0.105611, -23.7012, 7.37724, 0.105611, -28.9512, 6.87724, 0.105611, -28.9512, -3.87276, 3.85561, -29.2012, -4.62276, 3.85561, -28.9512, -4.12276, 4.35561, -28.4512, -4.12276, 4.85561, -27.4512, -3.12276, 5.10561, -25.9512, -1.87276, 4.10561, -26.7012, -4.62276, 4.85561, -27.2012, 1.12724, 0.105611, -27.4512, 2.62724, 0.105611, -26.2012, 4.12724, 0.105611, -27.7012, 2.87724, 0.105611, -29.2012, 1.12724, 3.35561, -27.4512, 2.62724, 3.35561, -25.9512, 4.37724, 3.35561, -27.7012, 2.87724, 3.35561, -29.2012, 1.12724, 6.35561, -27.4512, 1.87724, 6.35561, -26.9512, 3.37724, 6.35561, -28.4512, 2.87724, 6.35561, -29.2012, -3.87276, 0.105611, -25.4512, -2.37276, 0.105611, -26.7012, -4.12276, 0.105611, -28.7012, -5.62276, 0.105611, -27.4512, 3.37724, 0.105611, -24.4512, 2.12724, 0.105611, -24.2012, 2.12724, 0.105611, -23.7012, 3.62724, 0.105611, -25.4512, -0.622757, 0.105611, -21.2012, 5.12724, 0.105611, -15.2012, -6.62276, 0.105611, -14.4512, -1.12276, 0.105611, -21.2012, 14.6272, 6.35561, -23.9512, 16.1272, 6.35561, -21.9512, 18.6272, 6.35561, -23.9512, 16.6272, 6.35561, -25.9512, -0.872757, 0.105611, -23.7012, -0.872757, 0.105611, -22.9512, 0.377243, 0.105611, -23.9512, -1.12276, 0.105611, -25.7012, -2.37276, 0.105611, -24.9512, -2.37276, 0.105611, -24.4512, 16.6272, 0.105611, -22.4512, 18.1272, 0.105611, -23.9512, 16.6272, 0.105611, -25.2012, 15.1272, 0.105611, -23.7012, 11.3772, 0.105611, -15.4512, 11.3772, 0.105611, -14.9512, 14.6272, 0.105611, -12.2012, 12.3772, 3.35561, -20.9512, 13.6272, 3.35561, -19.4512, 15.3772, 3.35561, -21.2012, 13.8772, 3.35561, -22.7012, 12.3772, 0.105611, -20.7012, 13.6272, 0.105611, -19.4512, 15.3772, 0.105611, -21.2012, 14.1272, 0.105611, -22.4512, -7.37276, 0.105611, -13.2012, -8.12276, 0.105611, -13.2012, -9.12276, 0.105611, -12.2012, -10.1228, 0.105611, -10.4512, -10.8728, 0.105611, -10.4512, -11.8728, 0.105611, -9.45118, 10.1272, 0.105611, 10.7988, 11.3772, 0.105611, 9.54882, 11.3772, 0.105611, 8.79882, -9.12276, 0.105611, -11.4512, 5.12724, 0.105611, -14.4512, -12.3728, 0.105611, -8.20118, 9.12724, 0.105611, 11.0488, 13.6272, 0.105611, -5.95118, 6.37724, 0.105611, 14.2988, 8.87724, 0.105611, 12.0488, -8.62276, 0.105611, 13.5488, -8.37276, 0.105611, 14.5488, 15.3772, 0.105611, 5.54882, 15.6272, 0.105611, 4.79882, 14.6272, 0.105611, -5.95118, -13.8728, 0.105611, -8.45118, -14.6228, 0.105611, 8.04882, 6.37724, 0.105611, 14.7988, -26.1228, 7.10561, -18.2012, -18.3728, 7.10561, -10.4512, -16.1228, 8.10561, -12.4512, -16.1228, 8.10561, -12.9512, -23.8728, 8.10561, -20.7012, -26.1228, 7.35561, -18.7012, -17.6228, 7.85561, -11.1178, -25.3728, 8.10561, -19.3678, -22.8777, 7.85561, -16.7042, -23.8728, 0.105611, -17.2012, -22.3728, 0.105611, -18.2012, -23.8728, 0.105611, -20.2012, -25.3728, 0.105611, -18.9512, -22.8728, 6.35561, -17.9512, -22.3728, 6.35561, -18.2012, -23.8728, 6.35561, -20.2012, -24.3728, 6.35561, -19.9512, 12.8772, 6.35561, -18.2012, 11.3772, 6.35561, -20.2012, 10.8772, 6.35561, -20.2012, 8.87724, 6.35561, -18.2012, 10.3772, 6.35561, -16.2012, 9.37724, 3.35561, -18.2012, 10.3772, 3.35561, -16.7012, 12.3772, 3.35561, -18.2012, 11.1272, 3.35561, -19.7012, 11.6272, 0.105611, -19.4512, 11.1272, 0.105611, -19.4512, 11.1272, 0.105611, -18.7012, 12.3772, 0.105611, -18.2012, 10.3772, 0.105611, -17.9512, 9.62724, 0.105611, -17.9512, 9.62724, 0.105611, -17.4512, 10.8772, 0.105611, -16.7012, 18.1272, 6.35561, -14.4512, 20.1272, 6.35561, -12.4512, 25.1272, 6.35561, -17.4512, 23.1272, 6.35561, -19.4512, -22.3728, 0.105611, -14.4512, -23.6228, 0.105611, -15.4512, -24.3728, 0.105611, -15.4512, -21.3728, 0.105611, -12.7012, -16.1228, 0.105611, -10.9512, -17.3728, 0.105611, -9.70118, -17.6228, 0.105611, 10.5488, -27.3728, 0.105611, -18.9512, -68.8728, 0.105611, 22.5488, -63.6228, 0.105611, 27.7988, -24.8728, 0.105611, 24.5488, -18.3728, 0.105611, -9.70118, -11.6228, 0.105611, 17.5488, -17.6228, 0.105611, 11.7988, 23.3772, 0.105611, -17.4512, 24.3772, 0.105611, -17.7012, 23.1272, 0.105611, -18.9512, 21.6272, 0.105611, -17.4512, 21.6272, 0.105611, -16.9512, 22.8772, 0.105611, -16.2012, 21.6272, 3.35561, -17.4512, 22.6272, 3.35561, -15.9512, 24.6272, 3.35561, -17.4512, 23.1272, 3.35561, -18.9512, -20.6228, 0.105611, -14.4512, -19.3728, 0.105611, -15.4512, -21.1228, 0.105611, -17.4512, -22.3728, 0.105611, -16.4512, -20.1228, 6.35561, -15.2012, -19.3728, 6.35561, -15.4512, -21.1228, 6.35561, -17.4512, -21.6228, 6.35561, -17.2012, 20.1272, 0.105611, -10.9512, 19.3772, 0.105611, -10.9512, 18.3772, 0.105611, -9.95118, 18.3772, 0.105611, -9.20118, 22.6272, 0.105611, -2.95118, 17.3772, 0.105611, -8.45118, 10.1272, 5.10561, -14.7012, 8.37724, 5.10561, -16.7012, 7.87724, 5.10561, -16.7012, 5.87724, 4.10561, -14.7012, 7.62724, 4.10561, -12.7012, 9.29391, 5.10561, -14.0345, 6.87724, 5.10561, -15.7012, 8.37724, 0.105611, -13.2012, 9.87724, 0.105611, -14.4512, 8.37724, 0.105611, -16.2012, 6.87724, 0.105611, -15.2012, 9.12724, 3.35561, -14.2012, 9.87724, 3.35561, -14.4512, 8.37724, 3.35561, -16.2012, 7.62724, 3.35561, -15.9512, 20.1272, 0.105611, -13.2012, 21.8772, 0.105611, -14.7012, 20.3772, 0.105611, -16.2012, 18.6272, 0.105611, -14.4512, -10.1228, 0.105611, -12.9512, -8.62276, 0.105611, -14.4512, -10.1228, 0.105611, -15.7012, -11.6228, 0.105611, -14.2012, -18.1228, 0.105611, -11.4512, -16.6228, 0.105611, -12.4512, -18.1228, 0.105611, -14.4512, -19.6228, 0.105611, -13.4512, -18.1228, 3.35561, -14.4512, -19.6228, 3.35561, -13.4512, -19.6228, 3.35561, -12.9512, -17.8728, 3.35561, -11.4512, -16.6228, 3.35561, -12.4512, -17.1228, 6.35561, -12.2012, -16.6228, 6.35561, -12.4512, -18.1228, 6.35561, -14.4512, -18.8728, 6.35561, -14.2012, 11.1272, 6.35561, -9.95118, 13.1272, 6.35561, -11.4512, 11.1272, 6.35561, -13.9512, 9.12724, 6.35561, -12.4512, -15.3728, 3.60561, -11.2012, -13.3728, 3.85561, -9.20118, -13.1228, 4.85561, -10.9512, -11.6228, 5.10561, -12.2012, -12.8728, 3.85561, -13.7012, 11.1272, 0.105611, -10.4512, 12.6272, 0.105611, -11.4512, 11.1272, 0.105611, -13.4512, 9.62724, 0.105611, -12.4512, 11.1272, 3.35561, -13.4512, 9.62724, 3.35561, -12.4512, 9.62724, 3.35561, -11.9512, 11.3772, 3.35561, -10.4512, 12.6272, 3.35561, -11.4512, 17.3772, 0.105611, -13.2012, 15.8772, 0.105611, -11.7012, 15.8772, 0.105611, -11.2012, 17.1272, 0.105611, -10.4512, 18.6272, 0.105611, -11.9512, 17.8772, 0.105611, -13.2012, 18.8772, 3.35561, -11.7012, 17.8772, 3.35561, -13.2012, 17.3772, 3.35561, -13.2012, 15.8772, 3.35561, -11.7012, 16.8772, 3.35561, -10.2012, -14.3728, 0.105611, -11.4512, -13.1228, 0.105611, -9.95118, -11.3728, 0.105611, -11.7012, -12.8728, 0.105611, -12.9512, 29.6272, 4.10561, -9.20118, 31.6272, 5.10561, -6.70118, 33.6272, 5.10561, -8.45118, 31.6272, 4.10561, -10.9512, 30.2939, 4.85561, -8.36785, 32.2939, 4.85561, -10.1178, 14.1272, 0.105611, -7.45118, 15.6272, 0.105611, -8.70118, 13.8772, 0.105611, -10.7012, 12.3772, 0.105611, -9.45118, 33.1272, 0.105611, -8.45118, 32.1272, 0.105611, -9.95118, 31.6272, 0.105611, -9.95118, 30.1272, 0.105611, -8.45118, 31.3772, 0.105611, -6.95118, 31.1272, 3.35561, -7.70118, 31.6272, 3.35561, -6.95118, 33.1272, 3.35561, -8.45118, 32.6272, 3.35561, -9.20118, 21.1272, 0.105611, 0.29882, 23.1272, 0.105611, -1.45118, 21.1272, 0.105611, 1.54882, 33.1272, 0.105611, 7.54882, 30.3772, 0.105611, 10.0488, 31.8772, 0.105611, 12.5488, 26.6272, 0.105611, -0.20118, 26.6272, 0.105611, 0.29882, 33.1272, 0.105611, 6.54882, 30.8772, 6.35561, -5.70118, 30.8772, 6.35561, -6.20118, 28.8772, 6.35561, -7.95118, 26.6272, 6.35561, -5.70118, 28.3772, 6.35561, -3.70118, 30.3772, 0.105611, -5.70118, 30.3772, 0.105611, -6.20118, 28.8772, 0.105611, -7.45118, 27.3772, 0.105611, -5.70118, 28.3772, 0.105611, -4.20118, 30.3772, 3.35561, -5.70118, 30.3772, 3.35561, -6.20118, 28.8772, 3.35561, -7.45118, 27.3772, 3.35561, -5.70118, 28.3772, 3.35561, -4.20118, 24.3772, 0.105611, -2.70118, 25.8772, 0.105611, -1.20118, 27.6272, 0.105611, -2.95118, 26.1272, 0.105611, -4.45118, 24.3772, 0.105611, 2.54882, 25.8772, 0.105611, 1.54882, 24.1272, 0.105611, -0.45118, 22.8772, 0.105611, 0.54882, 24.3772, 3.35561, 2.79882, 25.8772, 3.35561, 1.54882, 24.1272, 3.35561, -0.45118, 22.6272, 3.35561, 0.79882, 23.8772, 0.105611, 4.29882, 22.1272, 0.105611, 2.04882, 21.3772, 0.105611, 2.04882, 18.3772, 0.105611, 8.54882, 25.1272, 6.35561, 4.04882, 29.8772, 6.35561, 8.79882, 31.8772, 6.35561, 7.29882, 31.8772, 6.35561, 6.79882, 27.1272, 6.35561, 2.04882, 25.1272, 6.35561, 3.54882, 27.3772, 0.105611, 4.54882, 27.3772, 0.105611, 5.29882, 28.6272, 0.105611, 4.54882, 27.1272, 0.105611, 2.54882, 25.8772, 0.105611, 3.29882, 25.8772, 0.105611, 3.79882, 27.1272, 3.35561, 5.54882, 28.6272, 3.35561, 4.54882, 27.1272, 3.35561, 2.54882, 25.6272, 3.35561, 3.54882, 9.37724, 0.105611, 17.7988, 9.87724, 0.105611, 19.0488, 12.3772, 0.105611, 16.5488, 18.3772, 0.105611, 9.04882, 29.6272, 0.105611, 10.0488, 19.1272, 0.105611, 23.2988, 16.6272, 0.105611, 25.7988, 17.6272, 0.105611, 26.7988, 26.6272, 0.105611, 7.04882, 25.6272, 0.105611, 5.29882, 13.1272, 0.105611, 16.5488, 19.1272, 0.105611, 22.5488, 29.8772, 0.105611, 8.29882, 31.3772, 0.105611, 7.29882, 29.8772, 0.105611, 5.29882, 28.3772, 0.105611, 6.54882, 29.8772, 3.35561, 8.29882, 31.3772, 3.35561, 7.29882, 29.8772, 3.35561, 5.29882, 28.3772, 3.35561, 6.54882, 14.6272, 7.10561, 6.54882, 7.12724, 7.10561, 14.0488, 7.12724, 7.35561, 14.5488, 9.37724, 8.10561, 16.5488, 17.1272, 8.10561, 8.79882, 15.1272, 7.35561, 6.54882, 7.87724, 8.10561, 15.2155, 15.7939, 8.10561, 7.29882, 14.6022, 8.10561, 8.77382, 13.6272, 0.105611, 8.79882, 14.6272, 0.105611, 10.2988, 16.6272, 0.105611, 8.79882, 15.1272, 0.105611, 7.29882, 15.1272, 3.35561, 10.2988, 16.6272, 3.35561, 8.79882, 15.1272, 3.35561, 7.29882, 13.6272, 3.35561, 9.04882, 15.1272, 6.35561, 10.2988, 16.6272, 6.35561, 8.79882, 15.8772, 6.35561, 8.29882, 14.3772, 6.35561, 9.79882, -14.3728, 0.105611, 13.0488, -12.8728, 0.105611, 11.7988, -14.6228, 0.105611, 9.79882, -16.1228, 0.105611, 11.0488, 10.6272, 3.35561, 11.7988, 12.1272, 3.35561, 13.2988, 13.8772, 3.35561, 11.5488, 12.3772, 3.35561, 10.0488, 10.8772, 0.105611, 11.7988, 12.1272, 0.105611, 13.2988, 13.8772, 0.105611, 11.5488, 12.3772, 0.105611, 10.2988, 11.6272, 6.35561, 12.5488, 12.1272, 6.35561, 13.2988, 13.8772, 6.35561, 11.5488, 13.1272, 6.35561, 11.0488, -11.6228, 0.105611, 15.7988, -10.1228, 0.105611, 14.5488, -11.6228, 0.105611, 12.7988, -13.1228, 0.105611, 13.7988, -11.6228, 4.10561, 16.5488, -9.12276, 4.10561, 14.5488, -11.1228, 5.35561, 14.5488, -13.8728, 4.35561, 14.0488, -12.6228, 5.35561, 13.0488, 10.8772, 3.35561, 14.5488, 9.87724, 3.35561, 13.0488, 9.37724, 3.35561, 13.0488, 7.87724, 3.35561, 14.5488, 9.12724, 3.35561, 16.0488, 8.87724, 0.105611, 14.7988, 8.12724, 0.105611, 14.7988, 9.37724, 0.105611, 16.0488, 10.8772, 0.105611, 14.5488, 10.1272, 0.105611, 13.2988, 9.62724, 0.105611, 13.2988, 8.87724, 6.35561, 15.2988, 9.37724, 6.35561, 16.0488, 10.8772, 6.35561, 14.5488, 10.3772, 6.35561, 13.7988, 15.6272, 0.105611, 26.0488, 9.62724, 0.105611, 20.0488, 6.37724, 0.105611, 15.2988, -11.1228, 0.105611, 17.5488, -27.8728, 0.105611, 63.5488, -23.3728, 0.105611, 68.0488, 12.8772, 3.60561, 17.2988, 10.3772, 3.60561, 19.5488, 12.3772, 4.85561, 19.5488, 13.8772, 5.10561, 21.0488, 15.1272, 3.85561, 20.0488, 12.8772, 0.105611, 21.2988, 14.3772, 0.105611, 20.2988, 12.8772, 0.105611, 18.2988, 11.3772, 0.105611, 19.5488, 15.8772, 0.105611, 24.2988, 17.3772, 0.105611, 23.0488, 15.6272, 0.105611, 21.0488, 14.1272, 0.105611, 22.2988)
@@ -39,101 +62,458 @@ visible = false
 [node name="camera" parent="." instance=ExtResource("2_4wyf3")]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 29, 20)
 
-[node name="Dog" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="Lucho" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -9)
 collision_layer = 2
 collision_mask = 2
-id = "Philipa"
+id = "Lucho"
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog2" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="Chicho" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 12)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 id = "Chicho"
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog3" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chicho"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Chicho"]
+avoidance_enabled = true
+
+[node name="Chicho" parent="Chicho" instance=ExtResource("6_4mrxx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Idler" type="Timer" parent="Chicho"]
+unique_name_in_owner = true
+one_shot = true
+autostart = true
+
+[node name="Gorda" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 0)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 id = "Gorda"
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog4" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="gorda" parent="Gorda" instance=ExtResource("7_4mrxx")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gorda"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Gorda"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Gorda"]
+one_shot = true
+autostart = true
+
+[node name="Dummy" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, 0)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog5" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy1" parent="Dummy" instance=ExtResource("8_q5onr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy"]
+one_shot = true
+autostart = true
+
+[node name="Dummy2" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -11)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog6" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy2" parent="Dummy2" instance=ExtResource("9_jhx03")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy2"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy2"]
+one_shot = true
+autostart = true
+
+[node name="Dummy3" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -26)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog7" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy3"]
+avoidance_enabled = true
+
+[node name="dummy3" parent="Dummy3" instance=ExtResource("10_o8fc1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Idler" type="Timer" parent="Dummy3"]
+one_shot = true
+autostart = true
+
+[node name="Dummy4" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -5.89431, 1, -23.7449)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog8" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy4" parent="Dummy4" instance=ExtResource("11_o8fc1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy4"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy4"]
+one_shot = true
+autostart = true
+
+[node name="Dummy5" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -15, 1, -22.437)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog9" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy5" parent="Dummy5" instance=ExtResource("12_xo05s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy5"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy5"]
+one_shot = true
+autostart = true
+
+[node name="Dummy6" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 25, 1, -25.437)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog10" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy6" parent="Dummy6" instance=ExtResource("13_dss4m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy6"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy6"]
+one_shot = true
+autostart = true
+
+[node name="Dummy7" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -15.5665, 1, 0.663637)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog11" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy7"]
+avoidance_enabled = true
+
+[node name="dummy7" parent="Dummy7" instance=ExtResource("14_dss4m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Idler" type="Timer" parent="Dummy7"]
+one_shot = true
+autostart = true
+
+[node name="Dummy8" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 0, 1, 23.563)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog12" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy8"]
+avoidance_enabled = true
+
+[node name="dummy8" parent="Dummy8" instance=ExtResource("15_7t5mc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Idler" type="Timer" parent="Dummy8"]
+one_shot = true
+autostart = true
+
+[node name="Dummy9" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -38, 1, 23.563)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog13" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy9" parent="Dummy9" instance=ExtResource("16_7t5mc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy9"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy9"]
+one_shot = true
+autostart = true
+
+[node name="Dummy10" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -46, 1, 8.56297)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog14" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy10" parent="Dummy10" instance=ExtResource("17_lakw3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy10"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy10"]
+one_shot = true
+autostart = true
+
+[node name="Dummy11" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 10.7232, 1, -42.1264)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
 
-[node name="Dog15" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy11" parent="Dummy11" instance=ExtResource("18_2lf6f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy11"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy11"]
+one_shot = true
+autostart = true
+
+[node name="Dummy12" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
 transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -36.4517, 1, -1.04294)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("5_i7141")
 navigation = NodePath("../NavigationRegion3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy12" parent="Dummy12" instance=ExtResource("19_7iits")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy12"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy12"]
+one_shot = true
+autostart = true
+
+[node name="Dummy13" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -31.1909, 1, 7.5847)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_i7141")
+navigation = NodePath("../NavigationRegion3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy13" parent="Dummy13" instance=ExtResource("20_oo54l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy13"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy13"]
+one_shot = true
+autostart = true
+
+[node name="Dummy14" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 34.2529, 1, -1.35858)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_i7141")
+navigation = NodePath("../NavigationRegion3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy14" parent="Dummy14" instance=ExtResource("21_kpybi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy14"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy14"]
+one_shot = true
+autostart = true
+
+[node name="Dummy15" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -2.04635, 1, -1.4638)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_i7141")
+navigation = NodePath("../NavigationRegion3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy15" parent="Dummy15" instance=ExtResource("22_kpybi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy15"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy15"]
+one_shot = true
+autostart = true
+
+[node name="Dummy16" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -16.8817, 1, 23.893)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_i7141")
+navigation = NodePath("../NavigationRegion3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy16"]
+avoidance_enabled = true
+
+[node name="dummy16" parent="Dummy16" instance=ExtResource("23_ctatt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Idler" type="Timer" parent="Dummy16"]
+one_shot = true
+autostart = true
+
+[node name="Dummy17" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, 19.8241, 1, -5.37416)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_i7141")
+navigation = NodePath("../NavigationRegion3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="dummy17" parent="Dummy17" instance=ExtResource("24_munwf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy17"]
+avoidance_enabled = true
+
+[node name="Idler" type="Timer" parent="Dummy17"]
+one_shot = true
+autostart = true
+
+[node name="Dummy18" type="StaticBody3D" parent="." node_paths=PackedStringArray("navigation")]
+transform = Transform3D(0.975174, 0.103358, 0.195841, -0.0756524, 0.986677, -0.14403, -0.208118, 0.125639, 0.970001, -3.4943, 1, -37.2249)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_i7141")
+navigation = NodePath("../NavigationRegion3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dummy18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
+shape = SubResource("BoxShape3D_1vg85")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Dummy18"]
+avoidance_enabled = true
+
+[node name="dummy18" parent="Dummy18" instance=ExtResource("25_munwf")]
+
+[node name="Idler" type="Timer" parent="Dummy18"]
+one_shot = true
+autostart = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_71j4m")
 
 [node name="map1" parent="NavigationRegion3D" instance=ExtResource("5_71j4m")]
 transform = Transform3D(1.41421, 0, -1.41421, 0, 2, 0, 1.41421, 0, 1.41421, 0, 0, 0)
+
+[connection signal="timeout" from="Chicho/Idler" to="Chicho" method="_on_idler_timeout"]
+[connection signal="timeout" from="Gorda/Idler" to="Gorda" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy/Idler" to="Dummy" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy2/Idler" to="Dummy2" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy3/Idler" to="Dummy3" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy4/Idler" to="Dummy4" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy5/Idler" to="Dummy5" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy6/Idler" to="Dummy6" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy7/Idler" to="Dummy7" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy8/Idler" to="Dummy8" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy9/Idler" to="Dummy9" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy10/Idler" to="Dummy10" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy11/Idler" to="Dummy11" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy12/Idler" to="Dummy12" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy13/Idler" to="Dummy13" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy14/Idler" to="Dummy14" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy15/Idler" to="Dummy15" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy16/Idler" to="Dummy16" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy17/Idler" to="Dummy17" method="_on_idler_timeout"]
+[connection signal="timeout" from="Dummy18/Idler" to="Dummy18" method="_on_idler_timeout"]
