@@ -66,12 +66,13 @@ theme_override_constants/margin_bottom = 5
 [node name="EndText" type="Label" parent="HBoxContainer/Body/EndScreen/CenterContainer/VBoxContainer/MarginContainer" index="0"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "You have found X/X pets."
+text = "Too bad! Seems you made a mistake. These remain missing: "
 horizontal_alignment = 1
 
 [node name="EndButton" type="Button" parent="HBoxContainer/Body/EndScreen/CenterContainer/VBoxContainer" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Next/Retry"
 
 [node name="StartScreen" type="PanelContainer" parent="HBoxContainer/Body" index="3"]
