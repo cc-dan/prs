@@ -17,7 +17,7 @@ func cast_ray(mask: int) -> Dictionary:
 	var result = space_state.intersect_ray(query)
 	return result
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var result: Dictionary = cast_ray(2)
 	if Input.is_action_just_pressed("lclick"):
 		if result.size() > 0:

@@ -14,13 +14,15 @@ script = ExtResource("2_mp5p1")
 disabled = true
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer/Body" index="0"]
+texture_filter = 1
 clip_contents = true
 layout_mode = 2
 stretch = true
+stretch_shrink = 2
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/Body/SubViewportContainer" index="0"]
 handle_input_locally = false
-size = Vector2i(523, 397)
+size = Vector2i(261, 198)
 render_target_update_mode = 4
 
 [node name="world" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_ht4pq")]
