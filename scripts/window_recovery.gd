@@ -1,6 +1,9 @@
 extends "res://scripts/window.gd"
 
 @onready var boxes: Array = [ %CheckBox, %CheckBox2, %CheckBox3 ]
+@onready var container = $"../.."
+
+
 
 var selected_pet: String
 
@@ -38,3 +41,16 @@ func disable_option(id: String) -> void:
 
 func _on_cancel_pressed() -> void:
 	vanish()
+	
+func _process(delta: float) -> void:
+	if visible:
+		var container_rect = get_parent().get_global_rect()
+		var this_rect = get_rect()
+		
+		var min_x = container_rect.position.x
+		var min_y = container_rect.position.y
+		var max_x = container_rect.position.x + container_rect.size.x - this_rect.size.x
+		var max_y = container_rect.position.y + container_rect.size.y - this_rect.size.y
+		
+		global_position.x = clamp(global_position.x, min_x, max_x)
+		global_position.y = clamp(global_position.y, min_y, max_y)

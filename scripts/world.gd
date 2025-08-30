@@ -19,6 +19,6 @@ func cast_ray(mask: int) -> Dictionary:
 
 func _process(_delta: float) -> void:
 	var result: Dictionary = cast_ray(2)
-	if Input.is_action_just_pressed("lclick"):
+	if Input.is_action_just_released("lclick"):
 		if result.size() > 0:
 			dog_clicked.emit(result["collider"].id)
