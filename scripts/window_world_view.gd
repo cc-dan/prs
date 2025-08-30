@@ -24,8 +24,11 @@ func _on_start_button_pressed() -> void:
 	%TimerLabel.visible = true
 	%Timer.start()
 	game_started.emit()
+	%world.visible = true
 
 func _on_world_dog_clicked(dog_name: StaticBody3D) -> void:
+	if recovery_window.visible:
+		return
 	recovery_window.appear(dog_name)
 	print("Dog clicked: ", dog_name.id)
 	recovery_window.set_global_position(Vector2(

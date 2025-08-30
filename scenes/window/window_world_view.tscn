@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_pgph7"]
 [ext_resource type="PackedScene" uid="uid://urskd6n21151" path="res://scenes/world.tscn" id="2_ht4pq"]
-[ext_resource type="Script" uid="uid://odf8l0pmgwdv" path="res://scripts/window_world_view.gd" id="2_mp5p1"]
+[ext_resource type="Script" uid="uid://bu6o5geie2jes" path="res://scripts/window_world_view.gd" id="2_mp5p1"]
 [ext_resource type="PackedScene" uid="uid://xgji17ywxot7" path="res://scenes/window/window_recovery.tscn" id="4_so2iy"]
 
 [node name="Window" instance=ExtResource("1_pgph7")]
@@ -26,6 +26,7 @@ size = Vector2i(261, 198)
 render_target_update_mode = 4
 
 [node name="world" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_ht4pq")]
+unique_name_in_owner = true
 
 [node name="RecoveryWindow" parent="HBoxContainer/Body/SubViewportContainer" index="1" instance=ExtResource("4_so2iy")]
 visible = false
