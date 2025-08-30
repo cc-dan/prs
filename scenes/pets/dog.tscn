@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=4 uid="uid://ckt5qopiaifds"]
 
 [ext_resource type="Texture2D" uid="uid://bd5u18iqv1k5h" path="res://textures/lucho.png" id="1_7nslh"]
-[ext_resource type="Script" uid="uid://c56gnwox4xkir" path="res://scripts/dog.gd" id="1_rjqd4"]
+[ext_resource type="Script" uid="uid://deufgy1qdoi1e" path="res://scripts/dog.gd" id="1_rjqd4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1vg85"]
 
@@ -324,6 +324,7 @@ _data = {
 script = ExtResource("1_rjqd4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334385, 0)
 shape = SubResource("BoxShape3D_1vg85")
 
 [node name="lucho" type="Node3D" parent="."]

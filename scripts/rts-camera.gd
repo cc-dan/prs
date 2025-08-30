@@ -17,15 +17,15 @@ func _unhandled_input(event):
 			else:
 				dragging = false
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			if camera_3d.fov >= 13:
+			if camera_3d.fov >= 5:
 				camera_3d.fov -= 2
 			else:
-				camera_3d.fov = 13
+				camera_3d.fov = 5
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			if camera_3d.fov <= 80:
+			if camera_3d.fov <= 45:
 				camera_3d.fov += 2
 			else:
-				camera_3d.fov = 80
+				camera_3d.fov = 45
 
 	if event is InputEventMouseMotion and dragging:
 		var delta = event.position - last_mouse_pos

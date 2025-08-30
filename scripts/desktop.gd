@@ -113,15 +113,14 @@ func _on_world_view_window_game_started() -> void:
 		}
 	])
 
-func _on_world_view_window_dog_found(selection: String, pet: String):
-	print("Dog found: ", pet, ", submitted as ", selection)
-	if selection == pet:
-		pet_names.erase(pet)
+func _on_world_view_window_dog_found(selection: String, pet: StaticBody3D):
+	print("Dog found: ", pet.id, ", submitted as ", selection)
+	if selection == pet.id:
+		pet_names.erase(pet.id)
 		print("It's a match")
 	tries -= 1
 	if tries == 0 or pet_names.is_empty():
 		end_game()
-
 
 func _on_end_timer_timeout() -> void:
 	get_tree().quit()
@@ -151,3 +150,4 @@ func _on_download_start() -> void:
 func send_mail(_from: String, _subject: String, _body: String):
 	messages.append({ from = _from, subject = _subject, body =  _body })
 	notify_mail.emit(messages.back())
+	pet.queue_free()

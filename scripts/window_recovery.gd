@@ -5,15 +5,18 @@ extends "res://scripts/window.gd"
 
 
 
-var selected_pet: String
+var selected_pet: StaticBody3D
 
-signal submit(selection_id: String, pet_id: String)
+signal submit(selection_id: String, pet: StaticBody3D)
 
-func appear(pet_id: String) -> void:
+func appear(pet: StaticBody3D) -> void:
+	selected_pet = pet
+	selected_pet.set_physics_process(false)
 	visible = true
-	selected_pet = pet_id
+	
 
 func vanish() -> void:
+	selected_pet.set_physics_process(true)
 	visible = false
 	for box in boxes:
 		box.button_pressed = false
@@ -34,6 +37,7 @@ func _on_submit_pressed() -> void:
 	if (len(selection)):
 		submit.emit(selection, selected_pet)
 		vanish()
+	
 
 func disable_option(id: String) -> void:
 	for box in boxes:
