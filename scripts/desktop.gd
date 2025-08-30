@@ -121,6 +121,7 @@ func _on_world_view_window_dog_found(selection: String, pet: StaticBody3D):
 	tries -= 1
 	if tries == 0 or pet_names.is_empty():
 		end_game()
+	pet.queue_free()
 
 func _on_end_timer_timeout() -> void:
 	get_tree().quit()
@@ -150,4 +151,4 @@ func _on_download_start() -> void:
 func send_mail(_from: String, _subject: String, _body: String):
 	messages.append({ from = _from, subject = _subject, body =  _body })
 	notify_mail.emit(messages.back())
-	pet.queue_free()
+	
