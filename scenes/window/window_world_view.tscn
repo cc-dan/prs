@@ -65,9 +65,11 @@ theme_override_constants/margin_bottom = 5
 
 [node name="EndText" type="Label" parent="HBoxContainer/Body/EndScreen/CenterContainer/VBoxContainer/MarginContainer" index="0"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(330, 0)
 layout_mode = 2
 text = "Too bad! Seems you made a mistake. These remain missing: "
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="EndButton" type="Button" parent="HBoxContainer/Body/EndScreen/CenterContainer/VBoxContainer" index="1"]
 unique_name_in_owner = true
