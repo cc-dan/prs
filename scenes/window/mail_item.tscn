@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqlte45mfjbuw"]
+
+[ext_resource type="Script" uid="uid://b36g551gdc1d6" path="res://scripts/mail_item.gd" id="1_4heyu"]
+
+[node name="HBoxContainer2" type="HBoxContainer"]
+script = ExtResource("1_4heyu")
+
+[node name="Subject" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Your first day on the job"
+alignment = 0
+
+[node name="From" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Karen Tregaskin"
+
+[connection signal="pressed" from="Subject" to="." method="_on_subject_pressed"]
