@@ -9,6 +9,9 @@ offset_right = 151.0
 offset_bottom = 157.0
 script = ExtResource("2_6xp8y")
 
+[node name="TitleBar" parent="HBoxContainer" index="0"]
+visible = false
+
 [node name="CloseButton" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer" index="0"]
 visible = false
 

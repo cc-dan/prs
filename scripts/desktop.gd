@@ -145,7 +145,7 @@ func _on_download_start() -> void:
 	add_child(bar)
 	await get_tree().create_timer(5).timeout
 	%PRSIcon.visible = true
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
 	send_mail("Karen Tregaskin", "Program instructions", "Good job! The program presents you with a top down view of the town. [b]Click and drag with the mouse[/b] to move the camera. Use the [b]scroll wheel[/b] to zoom in so you get all the little details on the pets roaming around! Once you think you've found a missing pet, [b]click on it[/b] to tell us which one you found.\n\nOnce again, good luck. You have a limited time before your shift ends, try to find all reported missing pets if possible!\n\nKaren Tregaskin - S&R operations manager")
 
 func send_mail(_from: String, _subject: String, _body: String):
