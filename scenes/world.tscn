@@ -43,18 +43,21 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 29, 20)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -9)
 collision_layer = 2
 collision_mask = 2
+id = "Philipa"
 navigation = NodePath("../NavigationRegion3D")
 
 [node name="Dog2" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 12)
 collision_layer = 2
 collision_mask = 2
+id = "Chicho"
 navigation = NodePath("../NavigationRegion3D")
 
 [node name="Dog3" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 0)
 collision_layer = 2
 collision_mask = 2
+id = "Gorda"
 navigation = NodePath("../NavigationRegion3D")
 
 [node name="Dog4" parent="." node_paths=PackedStringArray("navigation") instance=ExtResource("3_4wyf3")]

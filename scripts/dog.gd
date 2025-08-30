@@ -1,5 +1,7 @@
 extends StaticBody3D
 
+@export var id: String
+
 @export var navigation: NavigationRegion3D
 var map: RID
 

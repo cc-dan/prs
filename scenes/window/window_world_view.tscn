@@ -70,6 +70,7 @@ text = "You have found X/X pets."
 horizontal_alignment = 1
 
 [node name="EndButton" type="Button" parent="HBoxContainer/Body/EndScreen/CenterContainer/VBoxContainer" index="1"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Next/Retry"
 
@@ -104,4 +105,5 @@ wait_time = 300.0
 one_shot = true
 
 [connection signal="dog_clicked" from="HBoxContainer/Body/SubViewportContainer/SubViewport/world" to="." method="_on_world_dog_clicked"]
+[connection signal="submit" from="HBoxContainer/Body/SubViewportContainer/RecoveryWindow" to="." method="_on_recovery_window_submit"]
 [connection signal="pressed" from="HBoxContainer/Body/StartScreen/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
