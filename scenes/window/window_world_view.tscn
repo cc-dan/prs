@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdjxhb4yyqceu"]
+[gd_scene load_steps=7 format=3 uid="uid://bdjxhb4yyqceu"]
 
 [ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_pgph7"]
 [ext_resource type="PackedScene" uid="uid://urskd6n21151" path="res://scenes/world.tscn" id="2_ht4pq"]
 [ext_resource type="Script" uid="uid://bu6o5geie2jes" path="res://scripts/window_world_view.gd" id="2_mp5p1"]
+[ext_resource type="Texture2D" uid="uid://b4yp35xkciaub" path="res://textures/escritorio/ventana-mail-body-border.png" id="3_kn3dc"]
 [ext_resource type="PackedScene" uid="uid://xgji17ywxot7" path="res://scenes/window/window_recovery.tscn" id="4_so2iy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvhps"]
+texture = ExtResource("3_kn3dc")
+texture_margin_left = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0
 
 [node name="Window" instance=ExtResource("1_pgph7")]
 offset_right = 523.0
@@ -12,6 +19,9 @@ script = ExtResource("2_mp5p1")
 
 [node name="CloseButton" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer" index="0"]
 disabled = true
+
+[node name="Body" parent="HBoxContainer" index="1"]
+theme_override_styles/panel = SubResource("StyleBoxTexture_hvhps")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer/Body" index="0"]
 texture_filter = 1
@@ -22,7 +32,7 @@ stretch_shrink = 2
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/Body/SubViewportContainer" index="0"]
 handle_input_locally = false
-size = Vector2i(261, 198)
+size = Vector2i(255, 198)
 render_target_update_mode = 4
 
 [node name="world" parent="HBoxContainer/Body/SubViewportContainer/SubViewport" index="0" instance=ExtResource("2_ht4pq")]

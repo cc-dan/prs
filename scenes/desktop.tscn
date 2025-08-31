@@ -1,8 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://brix0jw77qnpr"]
+[gd_scene load_steps=23 format=3 uid="uid://brix0jw77qnpr"]
 
 [ext_resource type="Script" uid="uid://cvkhv4hnc0440" path="res://scripts/desktop.gd" id="1_81rff"]
-[ext_resource type="Texture2D" uid="uid://3ovlcv87urfh" path="res://scenes/images/saul.png" id="4_dcrhm"]
+[ext_resource type="Texture2D" uid="uid://tu2cew50k75r" path="res://textures/escritorio/escritorio.png" id="2_ox5hf"]
+[ext_resource type="Texture2D" uid="uid://d4k3m67tppm6t" path="res://textures/escritorio/mail.png" id="4_dcrhm"]
+[ext_resource type="Texture2D" uid="uid://irsfrjsa7pmx" path="res://textures/escritorio/prs.png" id="5_6ajoh"]
 [ext_resource type="PackedScene" uid="uid://bvnsasdwtykit" path="res://scenes/taskbar/taskbar.tscn" id="5_dcrhm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ajoh"]
+bg_color = Color(0.34902, 0.34902, 0.34902, 0.607843)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_veafp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkmwo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl26t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nikxi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcrhm"]
+bg_color = Color(0.6, 0.6, 0.6, 0.411765)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2hki"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhf0c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dcrhm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nd1jb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxgxr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6r5gw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbccy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0542q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4dq8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dbpt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81rff"]
 bg_color = Color(0, 0, 0, 1)
@@ -10,10 +46,10 @@ bg_color = Color(0, 0, 0, 1)
 [node name="Desktop" type="Node2D"]
 script = ExtResource("1_81rff")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 offset_right = 800.0
 offset_bottom = 600.0
-color = Color(0.564706, 0.819608, 1, 1)
+texture = ExtResource("2_ox5hf")
 
 [node name="Taskbar" parent="." instance=ExtResource("5_dcrhm")]
 unique_name_in_owner = true
@@ -42,6 +78,18 @@ offset_bottom = 151.0
 
 [node name="MailButton" type="Button" parent="MailIcon/VBoxContainer"]
 layout_mode = 2
+theme_override_icons/icon = ExtResource("4_dcrhm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ajoh")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_veafp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pkmwo")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_gl26t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6ajoh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nikxi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dcrhm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_q2hki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ajoh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_yhf0c")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dcrhm")
 icon = ExtResource("4_dcrhm")
 
 [node name="Label" type="Label" parent="MailIcon/VBoxContainer"]
@@ -70,7 +118,18 @@ offset_bottom = 151.0
 [node name="PRSButton" type="Button" parent="PRSIcon/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-icon = ExtResource("4_dcrhm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ajoh")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_nd1jb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vxgxr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6r5gw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6ajoh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_wbccy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dcrhm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0542q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ajoh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_v4dq8")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dbpt")
+icon = ExtResource("5_6ajoh")
 
 [node name="Label" type="Label" parent="PRSIcon/VBoxContainer"]
 unique_name_in_owner = true

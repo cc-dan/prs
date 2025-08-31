@@ -11,6 +11,7 @@ func init(pet_info: Dictionary):
 		%FurInfo.text += " with " + (pet_structure.describe(pet_info["hair_spots_color"]) + " " + pet_structure.describe(pet_info["hair_spots_shape"])).to_lower() + " spots"
 	%EarsInfo.text = pet_structure.describe(pet_info["ears"])
 	%NoseInfo.text = pet_structure.describe(pet_info["nose"])
+	%EyesInfo.text = pet_structure.describe(pet_info["eyes"])
 	
 
 func _process(delta: float) -> void:

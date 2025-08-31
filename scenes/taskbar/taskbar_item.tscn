@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bph7cjrvvo5yu"]
+[gd_scene load_steps=5 format=3 uid="uid://bph7cjrvvo5yu"]
 
-[ext_resource type="Script" uid="uid://ddnuj1se747dw" path="res://scripts/taskbar_item.gd" id="1_vhj3v"]
+[ext_resource type="Texture2D" uid="uid://couxt1yrgiunl" path="res://textures/escritorio/ventana-task.png" id="1_1y3t0"]
+[ext_resource type="Script" uid="uid://ugm60u0draul" path="res://scripts/taskbar_item.gd" id="1_vhj3v"]
+
+[sub_resource type="Theme" id="Theme_bhwaa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nsqsy"]
+texture = ExtResource("1_1y3t0")
 
 [node name="Button" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 35.0
+offset_bottom = 17.0
+theme = SubResource("Theme_bhwaa")
 theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = SubResource("StyleBoxTexture_nsqsy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nsqsy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nsqsy")
 text = "Text"
 script = ExtResource("1_vhj3v")
 

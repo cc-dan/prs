@@ -88,28 +88,30 @@ func _on_world_view_window_game_started() -> void:
 	start_game([
 		{
 			id = "Gorda", 
-			ears = pet_structure.EARS_ROUND,
-			nose = pet_structure.NOSE_BIG_ROUND,
+			ears = pet_structure.EARS_ROUND_LONG,
+			nose = pet_structure.NOSE_ROUND,
 			hair_spots_shape = pet_structure.HAIR_SPOTS_BIG,
-			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_BROWN,
-			hair_color = pet_structure.HAIR_COLOR_WHITE
+			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_WHITE,
+			hair_color = pet_structure.HAIR_COLOR_BROWN,
+			eyes = pet_structure.EYES_EYEPATCH
 		},
 		{
-			id = "Philipa",
-			ears = pet_structure.EARS_ROUND,
-			nose = pet_structure.NOSE_BIG_ROUND,
-			hair_spots_shape = 0,
-			hair_spots_color = 0,
-			hair_color = pet_structure.HAIR_COLOR_GREY
+			id = "Lucho",
+			ears = pet_structure.EARS_POINTY,
+			nose = pet_structure.NOSE_SMALL_FLAT, #Tal vez deberia ser bigflat
+			hair_spots_shape = pet_structure.HAIR_SPOTS_SMALL,
+			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_WHITE,
+			hair_color = pet_structure.HAIR_COLOR_GREY,
+			eyes = pet_structure.EYES_COMMON
 		},
 		{
 			id = "Chicho",
-			ears = pet_structure.EARS_POINTY,
-			nose = pet_structure.NOSE_BIG_ROUND,
-			hair_spots = pet_structure.HAIR_SPOTS_BIG,
-			hair_spots_shape = 0,
-			hair_spots_color = 0,
-			hair_color = pet_structure.HAIR_COLOR_GREY
+			ears = pet_structure.EARS_ROUND,
+			nose = pet_structure.NOSE_NARROW,
+			hair_spots_shape = pet_structure.HAIR_SPOTS_HEARTS,
+			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_BLOND, #Este si es correcto que sea blond
+			hair_color = pet_structure.HAIR_COLOR_GREY,
+			eyes = pet_structure.EYES_COMMON
 		}
 	])
 

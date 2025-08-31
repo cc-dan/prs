@@ -1,16 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp2r16k545otu"]
+[gd_scene load_steps=7 format=3 uid="uid://bp2r16k545otu"]
 
 [ext_resource type="Script" uid="uid://2bdx7lbi6cv6" path="res://scripts/window.gd" id="1_oya5r"]
+[ext_resource type="Texture2D" uid="uid://c3ftgggw8as71" path="res://textures/escritorio/ventana-mail-header.png" id="2_obuqq"]
+[ext_resource type="Texture2D" uid="uid://b4yp35xkciaub" path="res://textures/escritorio/ventana-mail-body-border.png" id="3_obuqq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnvhp"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_obuqq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oya5r"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2ayq"]
+texture = ExtResource("2_obuqq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lnte3"]
+texture = ExtResource("3_obuqq")
+texture_margin_left = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0
 
 [node name="Window" type="PanelContainer"]
 offset_right = 224.0
 offset_bottom = 159.0
+scale = Vector2(1, 0.88)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_obuqq")
 script = ExtResource("1_oya5r")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
@@ -19,12 +28,10 @@ theme_override_constants/separation = 0
 
 [node name="TitleBar" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pnvhp")
+theme_override_styles/panel = SubResource("StyleBoxTexture_y2ayq")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TitleBar"]
 layout_mode = 2
-theme_override_constants/margin_top = 2
-theme_override_constants/margin_bottom = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/TitleBar/MarginContainer"]
 layout_mode = 2
@@ -48,7 +55,7 @@ text = "X"
 [node name="Body" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_oya5r")
+theme_override_styles/panel = SubResource("StyleBoxTexture_lnte3")
 
 [connection signal="gui_input" from="HBoxContainer/TitleBar" to="." method="_on_title_bar_gui_input"]
 [connection signal="pressed" from="HBoxContainer/TitleBar/MarginContainer/HBoxContainer/CloseButton" to="." method="_on_close_pressed"]
