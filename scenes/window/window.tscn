@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bp2r16k545otu"]
+[gd_scene load_steps=8 format=3 uid="uid://bp2r16k545otu"]
 
 [ext_resource type="Script" uid="uid://2bdx7lbi6cv6" path="res://scripts/window.gd" id="1_oya5r"]
-[ext_resource type="Texture2D" uid="uid://c3ftgggw8as71" path="res://textures/escritorio/ventana-mail-header.png" id="2_obuqq"]
+[ext_resource type="Texture2D" uid="uid://k7fnsqn456rx" path="res://textures/escritorio/ventana-titulo.png" id="2_obuqq"]
+[ext_resource type="Texture2D" uid="uid://de5ki5ub3oksi" path="res://textures/escritorio/botoncerrar.png" id="3_lnte3"]
 [ext_resource type="Texture2D" uid="uid://b4yp35xkciaub" path="res://textures/escritorio/ventana-mail-body-border.png" id="3_obuqq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_obuqq"]
@@ -46,11 +47,15 @@ text = "Window Title"
 layout_direction = 3
 layout_mode = 2
 
-[node name="CloseButton" type="Button" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 10
+
+[node name="CloseButton" type="TextureButton" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
-text = "X"
+texture_normal = ExtResource("3_lnte3")
 
 [node name="Body" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -58,4 +63,4 @@ size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_lnte3")
 
 [connection signal="gui_input" from="HBoxContainer/TitleBar" to="." method="_on_title_bar_gui_input"]
-[connection signal="pressed" from="HBoxContainer/TitleBar/MarginContainer/HBoxContainer/CloseButton" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="HBoxContainer/TitleBar/MarginContainer/HBoxContainer/MarginContainer/CloseButton" to="." method="_on_close_pressed"]

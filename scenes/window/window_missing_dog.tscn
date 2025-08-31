@@ -23,8 +23,11 @@ script = ExtResource("2_3foo6")
 [node name="TitleBar" parent="HBoxContainer" index="0"]
 theme_override_styles/panel = SubResource("StyleBoxTexture_hdif7")
 
-[node name="CloseButton" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer" index="0"]
-disabled = true
+[node name="HBoxContainer" parent="HBoxContainer/TitleBar/MarginContainer" index="1"]
+custom_minimum_size = Vector2(0, 32)
+
+[node name="CloseButton" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer/MarginContainer" index="0"]
+visible = false
 
 [node name="Body" parent="HBoxContainer" index="1"]
 theme_override_styles/panel = SubResource("StyleBoxTexture_m3h0i")
