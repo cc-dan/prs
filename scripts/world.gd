@@ -1,7 +1,10 @@
 extends Node3D
 @onready var camera: Node3D = $camera/Base/Camera3D
+@onready var recovery_window: PanelContainer = $"../../RecoveryWindow"
+
 
 var is_clicking_a_dog: bool = false
+var is_choosing: bool = false
 signal dog_clicked(dog_name: StaticBody3D)
 
 func cast_ray(mask: int) -> Dictionary:
@@ -20,10 +23,16 @@ func cast_ray(mask: int) -> Dictionary:
 
 func _process(_delta: float) -> void:
 	var result: Dictionary = cast_ray(2)
+	
+	if recovery_window.visible: 
+		is_clicking_a_dog = false
+		return;
+
 	if Input.is_action_just_pressed("lclick"):
 		is_clicking_a_dog = true
 	
-	if result.size() <= 0: is_clicking_a_dog = false;
+	if result.size() <= 0: 
+		is_clicking_a_dog = false;
 	
 	if Input.is_action_just_released("lclick") and is_clicking_a_dog:
 		var instance = result["collider"]

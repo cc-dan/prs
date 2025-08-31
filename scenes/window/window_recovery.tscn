@@ -17,9 +17,6 @@ script = ExtResource("2_6xp8y")
 [node name="TitleBar" parent="HBoxContainer" index="0"]
 visible = false
 
-[node name="CloseButton" parent="HBoxContainer/TitleBar/MarginContainer/HBoxContainer" index="0"]
-visible = false
-
 [node name="Body" parent="HBoxContainer" index="1"]
 theme_override_styles/panel = SubResource("StyleBoxTexture_v83dp")
 
