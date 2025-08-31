@@ -2,6 +2,7 @@ extends Node3D
 @onready var camera: Node3D = $camera/Base/Camera3D
 @onready var recovery_window: PanelContainer = $"../../RecoveryWindow"
 
+var interactable := false
 
 var is_clicking_a_dog: bool = false
 var is_choosing: bool = false
@@ -22,6 +23,8 @@ func cast_ray(mask: int) -> Dictionary:
 	return result
 
 func _process(_delta: float) -> void:
+	if not interactable: return
+	
 	var result: Dictionary = cast_ray(2)
 	
 	if recovery_window.visible: 
