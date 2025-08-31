@@ -69,24 +69,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = ": Short and round"
 horizontal_alignment = 2
 
-[node name="TailForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="2"]
-layout_mode = 2
-
-[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/TailForm" index="0"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Tail:"
-
-[node name="TailInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/TailForm" index="1"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 8
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Long"
-horizontal_alignment = 2
-
-[node name="NoseForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="3"]
+[node name="NoseForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="2"]
 layout_mode = 2
 
 [node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/NoseForm" index="0"]
@@ -103,7 +86,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Long"
 horizontal_alignment = 2
 
-[node name="EyesForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="4"]
+[node name="EyesForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="3"]
 layout_mode = 2
 
 [node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/EyesForm" index="0"]

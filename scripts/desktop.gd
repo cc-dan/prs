@@ -91,7 +91,7 @@ func _on_world_view_window_game_started() -> void:
 			ears = pet_structure.EARS_ROUND_LONG,
 			nose = pet_structure.NOSE_ROUND,
 			hair_spots_shape = pet_structure.HAIR_SPOTS_BIG,
-			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_WHITE,
+			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_GREY,
 			hair_color = pet_structure.HAIR_COLOR_BROWN,
 			eyes = pet_structure.EYES_EYEPATCH
 		},
@@ -110,7 +110,7 @@ func _on_world_view_window_game_started() -> void:
 			nose = pet_structure.NOSE_NARROW,
 			hair_spots_shape = pet_structure.HAIR_SPOTS_HEARTS,
 			hair_spots_color = pet_structure.HAIR_SPOTS_COLOR_BLOND, #Este si es correcto que sea blond
-			hair_color = pet_structure.HAIR_COLOR_GREY,
+			hair_color = pet_structure.HAIR_COLOR_BLACK,
 			eyes = pet_structure.EYES_COMMON
 		}
 	])

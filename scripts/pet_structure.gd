@@ -15,11 +15,13 @@ enum {
 	HAIR_SPOTS_COLOR_WHITE,
 	HAIR_SPOTS_COLOR_BROWN,
 	HAIR_SPOTS_COLOR_BLACK,
+	HAIR_SPOTS_COLOR_GREY,
 	
 	HAIR_COLOR_BLOND,
 	HAIR_COLOR_WHITE,
 	HAIR_COLOR_GREY,
 	HAIR_COLOR_BROWN,
+	HAIR_COLOR_BLACK,
 	
 	NOSE_SMALL,
 	NOSE_ROUND,
@@ -42,9 +44,11 @@ const example := {
 static func describe(element: int) -> String:
 	match element:
 		EARS_POINTY: return "Pointy"
-		EARS_ROUND, NOSE_ROUND: return "Round"
-		EARS_ROUND_LONG, NOSE_BIG_ROUND: return "Round and big"
+		EARS_ROUND: return "Droopy and small"
+		EARS_ROUND_LONG: return "Droopy and big"
 		
+		NOSE_BIG_ROUND: return "Round and big"
+		NOSE_ROUND: return "Round"
 		NOSE_SMALL_FLAT: return "Small and flat"
 		NOSE_BIG_FLAT: return "Big and flat"
 		NOSE_NARROW: return "Narrow"
@@ -53,14 +57,13 @@ static func describe(element: int) -> String:
 		HAIR_SPOTS_SMALL: return "Small"
 		HAIR_SPOTS_HEARTS: return "Heart-shaped"
 		
-		HAIR_SPOTS_COLOR_BLACK: return "Black"
+		HAIR_SPOTS_COLOR_BLACK, HAIR_COLOR_BLACK: return "Black"
 		HAIR_SPOTS_COLOR_BLOND, HAIR_COLOR_BLOND: return "Blond"
 		HAIR_SPOTS_COLOR_BROWN, HAIR_COLOR_BROWN: return "Brown"
 		HAIR_SPOTS_COLOR_WHITE, HAIR_COLOR_WHITE: return "White"
+		HAIR_SPOTS_COLOR_GREY, HAIR_COLOR_GREY: return "Grey"
 
 		EYES_COMMON: return "Common"
 		EYES_EYEPATCH: return "Eyepatch"
-
-		HAIR_COLOR_GREY: return "Grey"
 	
 	return "Unknown"

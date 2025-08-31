@@ -36,12 +36,9 @@ func get_next_point()->Vector3:
 	return path[path_index]
 
 func _physics_process(delta: float) -> void:
-	if id == "Gorda": 
-		if idle: print("idling for ", $Idler.time_left)
 	if idle: return
 	
 	var next_point := get_next_point()
-	if id == "Gorda": print("Stopped idling, next point: ", next_point)
 	if next_point == Vector3.ZERO:
 		idle = true
 		$Idler.start()
