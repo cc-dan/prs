@@ -1,7 +1,8 @@
 extends "res://scripts/window.gd"
 
 signal game_started
-signal game_ended(won: bool)
+signal game_ended
+signal timed_out
 signal dog_found(selection: String, pet: StaticBody3D)
 var task_bar = null
 
@@ -38,7 +39,7 @@ func _on_world_dog_clicked(dog_name: StaticBody3D) -> void:
 	recovery_window.visible = true
 
 func _on_timer_timeout() -> void:
-	%EndScreen.visible = true
+	timed_out.emit()
 
 func _on_end_button_pressed() -> void:
 	game_ended.emit()
@@ -48,6 +49,7 @@ func _on_recovery_window_submit(selection: String, pet: StaticBody3D) -> void:
 	dog_found.emit(selection, pet)
 
 func end_game(end_text: String, won: bool) -> void:
+	%Timer.stop()
 	%EndText.text = end_text
 	%EndScreen.visible = true
 	%EndButton.text = "Continue"

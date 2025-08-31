@@ -10,7 +10,7 @@ content_margin_left = 5.0
 texture = ExtResource("1_1y3t0")
 
 [node name="Button" type="Button"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(110, 0)
 offset_right = 35.0
 offset_bottom = 17.0
 theme = SubResource("Theme_bhwaa")

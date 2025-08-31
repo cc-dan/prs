@@ -44,7 +44,7 @@ func end_game() -> void:
 			s += pet_names[i]
 			if i + 1 != len(pet_names):
 				s += ", "
-		end_text = "Too bad! Seems you made a mistake. These remain missing: " + s
+		end_text = "Too bad! These remain missing: " + s
 	game_window.end_game(end_text, pet_names.is_empty())
 	
 func popup_quest(pet_info: Dictionary) -> void:
@@ -72,6 +72,7 @@ func _on_world_view_icon_pressed() -> void:
 	game_window.game_started.connect(_on_world_view_window_game_started)
 	game_window.dog_found.connect(_on_world_view_window_dog_found)
 	game_window.game_ended.connect(_on_game_ended)
+	game_window.timed_out.connect(_on_game_timed_out)
 	add_child(game_window)
 
 func _on_game_ended() -> void:
@@ -83,6 +84,9 @@ func _on_game_ended() -> void:
 		%EndTimer.start()
 	else:
 		get_tree().reload_current_scene()
+		
+func _on_game_timed_out() -> void:
+	end_game()
 
 func _on_world_view_window_game_started() -> void:
 	start_game([
