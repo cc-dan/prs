@@ -31,7 +31,6 @@ func _on_world_dog_clicked(dog_name: StaticBody3D) -> void:
 	if recovery_window.visible:
 		return
 	recovery_window.appear(dog_name)
-	print("Dog clicked: ", dog_name.id)
 	recovery_window.set_global_position(Vector2(
 		get_viewport().get_mouse_position().x + 15,
 		get_viewport().get_mouse_position().y + 15

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckt5qopiaifds"]
 
 [ext_resource type="Script" uid="uid://c56gnwox4xkir" path="res://scripts/dog.gd" id="1_rjqd4"]
-[ext_resource type="PackedScene" uid="uid://crafnn06804nc" path="res://scenes/meshes/pets/lucho/lucho.glb" id="2_rjqd4"]
+[ext_resource type="PackedScene" uid="uid://crafnn06804nc" path="res://meshes/pets/lucho/lucho.glb" id="2_rjqd4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1vg85"]
 

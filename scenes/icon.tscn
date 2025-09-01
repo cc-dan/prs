@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0dyw1l7ttqtj"]
 
-[ext_resource type="Texture2D" uid="uid://3ovlcv87urfh" path="res://scenes/images/saul.png" id="1_h6rt1"]
+[ext_resource type="Texture2D" uid="uid://3ovlcv87urfh" path="res://images/saul.png" id="1_h6rt1"]
 
 [node name="Icon" type="Control"]
 layout_mode = 3

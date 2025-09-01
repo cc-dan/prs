@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_ypbx4"]
 [ext_resource type="Script" uid="uid://cjpqmum7es1iv" path="res://scripts/window_recovery.gd" id="2_6xp8y"]
 [ext_resource type="Texture2D" uid="uid://cqlxul473fthx" path="res://textures/escritorio/ventana-select.png" id="3_7xqa7"]
-[ext_resource type="ButtonGroup" uid="uid://diy00s0kwsd8p" path="res://scenes/resources/window_recovery_buttons.tres" id="3_kycyh"]
+[ext_resource type="ButtonGroup" uid="uid://diy00s0kwsd8p" path="res://resources/window_recovery_buttons.tres" id="3_kycyh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v83dp"]
 texture = ExtResource("3_7xqa7")
