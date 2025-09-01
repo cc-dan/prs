@@ -120,10 +120,8 @@ func _on_world_view_window_game_started() -> void:
 	])
 
 func _on_world_view_window_dog_found(selection: String, pet: StaticBody3D):
-	print("Dog found: ", pet.id, ", submitted as ", selection)
 	if selection == pet.id:
 		pet_names.erase(pet.id)
-		print("It's a match")
 	tries -= 1
 	if tries == 0 or pet_names.is_empty():
 		end_game()
