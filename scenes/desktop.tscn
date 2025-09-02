@@ -96,7 +96,7 @@ icon = ExtResource("4_dcrhm")
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "Mail"
+text = "ICON_MAIL"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -136,7 +136,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "Pet Recovery Services"
+text = "ICON_PRS"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -153,9 +153,7 @@ layout_mode = 2
 [node name="EndText" type="Label" parent="EndScreen/CenterContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Thank you for playing!
-https://wsilla.itch.io
-30/08/25"
+text = "END_TEXT"
 horizontal_alignment = 1
 
 [node name="EndTimer" type="Timer" parent="."]

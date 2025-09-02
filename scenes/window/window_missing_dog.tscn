@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1j71sqxb754k"]
 
 [ext_resource type="PackedScene" uid="uid://bp2r16k545otu" path="res://scenes/window/window.tscn" id="1_owajo"]
-[ext_resource type="Script" uid="uid://dkc5ax13a8rik" path="res://scripts/missing_dog_window.gd" id="2_3foo6"]
+[ext_resource type="Script" uid="uid://dkc5ax13a8rik" path="res://scripts/window_missing_dog.gd" id="2_3foo6"]
 [ext_resource type="Texture2D" uid="uid://dy5475natm8cf" path="res://textures/escritorio/ventana-missing-header.png" id="3_72aur"]
 [ext_resource type="Texture2D" uid="uid://jesaxy4rnlfm" path="res://textures/escritorio/ventana-missing-body.png" id="4_hdif7"]
 
@@ -32,19 +32,24 @@ visible = false
 [node name="Body" parent="HBoxContainer" index="1"]
 theme_override_styles/panel = SubResource("StyleBoxTexture_m3h0i")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Body" index="0"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Body" index="0"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Body/MarginContainer" index="0"]
 layout_mode = 2
 
-[node name="FurForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="0"]
+[node name="FurForm" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="0"]
 layout_mode = 2
 
-[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/FurForm" index="0"]
+[node name="Key" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/FurForm" index="0"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Fur:"
+text = "APPEARANCE_FUR"
 
-[node name="FurInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/FurForm" index="1"]
+[node name="FurInfo" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/FurForm" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
@@ -52,16 +57,33 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Light brown with white spots"
 horizontal_alignment = 2
 
-[node name="EarsForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="1"]
+[node name="SpotsForm" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="1"]
 layout_mode = 2
 
-[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/EarsForm" index="0"]
+[node name="Key" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/SpotsForm" index="0"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Ears:"
+text = "APPEARANCE_SPOTS"
 
-[node name="EarsInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/EarsForm" index="1"]
+[node name="SpotsInfo" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/SpotsForm" index="1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Light brown with white spots"
+horizontal_alignment = 2
+
+[node name="EarsForm" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="2"]
+layout_mode = 2
+
+[node name="Key" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/EarsForm" index="0"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "APPEARANCE_EARS"
+
+[node name="EarsInfo" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/EarsForm" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
@@ -69,16 +91,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = ": Short and round"
 horizontal_alignment = 2
 
-[node name="NoseForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="2"]
+[node name="NoseForm" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="3"]
 layout_mode = 2
 
-[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/NoseForm" index="0"]
+[node name="Key" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/NoseForm" index="0"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Nose:"
+text = "APPEARANCE_NOSE"
 
-[node name="NoseInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/NoseForm" index="1"]
+[node name="NoseInfo" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/NoseForm" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
@@ -86,16 +108,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Long"
 horizontal_alignment = 2
 
-[node name="EyesForm" type="HBoxContainer" parent="HBoxContainer/Body/VBoxContainer" index="3"]
+[node name="EyesForm" type="HBoxContainer" parent="HBoxContainer/Body/MarginContainer/VBoxContainer" index="4"]
 layout_mode = 2
 
-[node name="Key" type="Label" parent="HBoxContainer/Body/VBoxContainer/EyesForm" index="0"]
+[node name="Key" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/EyesForm" index="0"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Eyes:"
+text = "APPEARANCE_EYES"
 
-[node name="EyesInfo" type="Label" parent="HBoxContainer/Body/VBoxContainer/EyesForm" index="1"]
+[node name="EyesInfo" type="Label" parent="HBoxContainer/Body/MarginContainer/VBoxContainer/EyesForm" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8

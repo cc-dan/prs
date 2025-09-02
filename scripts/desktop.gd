@@ -17,11 +17,14 @@ signal notify_mail(content)
 
 var messages := [
 	{
-		from = "Karen Tregaskin",
-		subject = "Your first day on the job",
-		body = "Welcome to the Pet Recovery Services internship program! We're excited to begin working with you. Your duty will be of very important value to the community, for which I advise to bear with me for a moment while I explain the way this works.\nAs you might know, you'll be attending to a few reports of missing pets in the area. You'll receive a list of pet descriptions, and using our specialized search & rescue software you'll have to report on their location. As you've just begun, please click the link below to download the program to your desktop. I'll tell you how to use it once you download it.\n\n[color=blue][url=download]Download[/url][/color]\n\nGood luck!\n\nKind regards,\nKaren Tregaskin - PRS S&R operations manager"
+		from = tr("MAIL_BOSS_NAME"),
+		subject = tr("MAIL_INTRO_SUBJECT"),
+		body = tr("MAIL_INTRO_TEXT")
 	}
 ]
+
+func _init() -> void:
+	TranslationServer.set_locale(OS.get_locale_language())
 
 func _ready() -> void:
 	TransitionScreen.transition(true)
@@ -37,18 +40,18 @@ func start_game(objectives: Array) -> void:
 func end_game() -> void:
 	var end_text: String
 	if pet_names.is_empty():
-		end_text = "Congratulations, you have found them all!"
+		end_text = tr("VICTORY_TEXT")
 	else:
 		var s: String
 		for i in range(len(pet_names)):
 			s += pet_names[i]
 			if i + 1 != len(pet_names):
 				s += ", "
-		end_text = "Too bad! These remain missing: " + s
+		end_text = tr("FAILURE_TEXT") + " " + s
 	game_window.end_game(end_text, pet_names.is_empty())
 	
 func popup_quest(pet_info: Dictionary) -> void:
-	var popup: window = create_window(missing_dog_window, "MISSING: " + pet_info["id"]) #missing_dog_window.instantiate()
+	var popup: window = create_window(missing_dog_window, tr("WINDOW_MISSING_TITLE") + " " + pet_info["id"]) #missing_dog_window.instantiate()
 	popup.init(pet_info)
 	var canvas: Vector2 = DisplayServer.window_get_size()
 	popup.set_position(Vector2(randi_range(0, canvas.x / 2), randi_range(0, canvas.y / 2)))
@@ -91,7 +94,7 @@ func _on_game_timed_out() -> void:
 func _on_world_view_window_game_started() -> void:
 	start_game([
 		{
-			id = "Gorda", 
+			id = tr("PET_NAME_GORDA"), 
 			ears = pet_structure.EARS_ROUND_LONG,
 			nose = pet_structure.NOSE_ROUND,
 			hair_spots_shape = pet_structure.HAIR_SPOTS_BIG,
@@ -100,7 +103,7 @@ func _on_world_view_window_game_started() -> void:
 			eyes = pet_structure.EYES_EYEPATCH
 		},
 		{
-			id = "Lucho",
+			id = tr("PET_NAME_LUCHO"),
 			ears = pet_structure.EARS_POINTY,
 			nose = pet_structure.NOSE_SMALL_FLAT, #Tal vez deberia ser bigflat
 			hair_spots_shape = pet_structure.HAIR_SPOTS_SMALL,
@@ -109,7 +112,7 @@ func _on_world_view_window_game_started() -> void:
 			eyes = pet_structure.EYES_COMMON
 		},
 		{
-			id = "Chicho",
+			id = tr("PET_NAME_CHICHO"),
 			ears = pet_structure.EARS_ROUND,
 			nose = pet_structure.NOSE_NARROW,
 			hair_spots_shape = pet_structure.HAIR_SPOTS_HEARTS,
@@ -132,7 +135,7 @@ func _on_end_timer_timeout() -> void:
 
 
 func _on_mail_button_pressed() -> void:
-	var w: window = create_window(mail_window, "Mail")
+	var w: window = create_window(mail_window, tr("ICON_MAIL"))
 	if w:
 		add_child(w)
 		w.download_started.connect(_on_download_start)
@@ -143,14 +146,13 @@ func _on_mail_button_pressed() -> void:
 		
 func _on_download_start() -> void:
 	if %PRSIcon.visible: return
-	print("Downloading...")
 	var bar = download_bar.instantiate()
 	bar.init(5)
 	add_child(bar)
 	await get_tree().create_timer(5).timeout
 	%PRSIcon.visible = true
 	await get_tree().create_timer(1).timeout
-	send_mail("Karen Tregaskin", "Program instructions", "Good job! The program presents you with a top down view of the town. [b]Click and drag with the mouse[/b] to move the camera. Use the [b]scroll wheel[/b] to zoom in so you get all the little details on the pets roaming around! Once you think you've found a missing pet, [b]click on it[/b] to tell us which one you found.\n\nOnce again, good luck. You have a limited time before your shift ends, try to find all reported missing pets if possible!\n\nKaren Tregaskin - S&R operations manager")
+	send_mail(tr("MAIL_BOSS_NAME"), tr("MAIL_TUTORIAL_SUBJECT"), tr("MAIL_TUTORIAL_TEXT"))
 
 func send_mail(_from: String, _subject: String, _body: String):
 	messages.append({ from = _from, subject = _subject, body =  _body })

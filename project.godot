@@ -33,6 +33,10 @@ lclick={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://translations/prs_translations.en.translation", "res://translations/prs_translations.es_Latn_AR.translation")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

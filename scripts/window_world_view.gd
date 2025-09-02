@@ -4,19 +4,10 @@ signal game_started
 signal game_ended
 signal timed_out
 signal dog_found(selection: String, pet: StaticBody3D)
-var task_bar = null
 
 func _process(_delta: float) -> void:
+	super._process(_delta)
 	%TimerLabel.text = str(int(%Timer.time_left))
-	var screen_size = get_viewport_rect().size
-	var this_size = get_rect().size  # solo si es Control
-	if task_bar == null:
-		task_bar = get_parent().get_node("Taskbar").get_node("PanelContainer")
-	var task_bar_rect = task_bar.get_rect()
-		
-	global_position.x = clamp(global_position.x, 0, screen_size.x - this_size.x)
-	global_position.y = clamp(global_position.y, 0, screen_size.y - (this_size.y + task_bar_rect.size.y))
-
 
 @onready var recovery_window: PanelContainer = $HBoxContainer/Body/SubViewportContainer/RecoveryWindow
 
@@ -51,4 +42,4 @@ func end_game(end_text: String, won: bool) -> void:
 	%Timer.stop()
 	%EndText.text = end_text
 	%EndScreen.visible = true
-	%EndButton.text = "Continue"
+	%EndButton.text = tr("CONTINUE")

@@ -3,8 +3,6 @@ extends "res://scripts/window.gd"
 @onready var boxes: Array = [ %CheckBox, %CheckBox2, %CheckBox3 ]
 @onready var container = $"../.."
 
-
-
 var selected_pet: StaticBody3D
 
 signal submit(selection_id: String, pet: StaticBody3D)
@@ -13,7 +11,6 @@ func appear(pet: StaticBody3D) -> void:
 	selected_pet = pet
 	selected_pet.set_physics_process(false)
 	visible = true
-	
 
 func vanish() -> void:
 	selected_pet.set_physics_process(true)

@@ -27,7 +27,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Downloading..."
+text = "DOWNLOADING"
 
 [node name="Bar" type="ProgressBar" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
