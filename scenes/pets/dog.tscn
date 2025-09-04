@@ -379,5 +379,4 @@ avoidance_enabled = true
 unique_name_in_owner = true
 one_shot = true
 
-[connection signal="animation_finished" from="Model/AnimationPlayer" to="." method="_on_animation_finished"]
 [connection signal="timeout" from="Idler" to="." method="_on_idler_timeout"]

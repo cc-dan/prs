@@ -14,6 +14,7 @@ func _ready() -> void:
 	map = navigation.get_navigation_map()
 	$Idler.wait_time = randf_range(0, 2)
 	$Idler.start()
+	animation_player.connect("animation_finished", _on_animation_finished)
 
 func random_point_in_circle(radius: float) -> Vector2:
 	var x := randf_range(-radius, radius)
@@ -57,6 +58,14 @@ func _on_idler_timeout() -> void:
 	animation_player.play("Animation")
 	$Idler.wait_time = randf_range(2, 5)
 
-
 func _on_animation_finished(anim_name: StringName) -> void:
-	animation_player.stop() if idle else animation_player.play()
+	animation_player.stop() if idle else animation_player.play("Animation")
+
+func freeze() -> void:
+	if not idle:
+		idle = true
+	else:
+		$Idler.stop()
+	
+func unfreeze() -> void:
+	$Idler.start(1)
