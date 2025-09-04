@@ -9,11 +9,11 @@ signal submit(selection_id: String, pet: StaticBody3D)
 
 func appear(pet: StaticBody3D) -> void:
 	selected_pet = pet
-	selected_pet.freeze() #.set_physics_process(false)
+	selected_pet.freeze()
 	visible = true
 
 func vanish() -> void:
-	selected_pet.unfreeze() #.set_physics_process(true)
+	selected_pet.unfreeze()
 	visible = false
 	for box in boxes:
 		box.button_pressed = false
