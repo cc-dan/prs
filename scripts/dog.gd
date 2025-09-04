@@ -68,4 +68,5 @@ func freeze() -> void:
 		$Idler.stop()
 	
 func unfreeze() -> void:
+	if not idle: return
 	$Idler.start(1)
