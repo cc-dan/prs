@@ -15,7 +15,7 @@ var tries: int
 
 signal notify_mail(content)
 
-var messages := [
+@onready var messages := [
 	{
 		from = tr("MAIL_BOSS_NAME"),
 		subject = tr("MAIL_INTRO_SUBJECT"),
